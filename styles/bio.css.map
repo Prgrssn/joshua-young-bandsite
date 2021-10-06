@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"bio.css"}
+{"version":3,"sources":["partials/fonts.css","bio.scss"],"names":[],"mappings":"AAAA;EACE,0BAAA;EACA,qDAAA;ACCF;ADCA;EACE,0BAAA;EACA,qDAAA;ACCF;ADCA;EACE,yBAAA;EACA,wDAAA;ACCF;ADCA;EACE,yBAAA;ACCF;AAXA;EACE,yBAAA;AAeF","file":"bio.css"}
