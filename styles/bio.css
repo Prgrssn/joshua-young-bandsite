@@ -1,10 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "avenir-reg";
-}
-
 @font-face {
   font-family: "avenir-reg";
   src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
@@ -17,11 +10,22 @@
   font-family: "avenir-demi";
   src: url(../../assets/fonts/AvenirNextLTPro-Demi.otf);
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "avenir-reg";
+}
+
 .navbar {
   display: flex;
   flex-direction: column;
   background-color: #323232;
   align-content: center;
+  min-width: 100vw;
 }
 .navbar__logo {
   max-height: 1.25rem;
@@ -43,21 +47,45 @@
   align-content: center;
 }
 .navbar__list-item--active {
-  border-bottom: 0.25rem solid white;
-  font-weight: 700;
-  padding-left: 3rem;
+  border-bottom: 0.25rem solid #ffffff;
+  font-family: "avenir-bold";
+  padding-left: 2.75rem;
   padding-right: 3rem;
 }
 .navbar__list-item--inactive {
-  padding-right: 3.5rem;
+  padding-right: 3.75rem;
 }
 .navbar__link {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
   font-size: 0.875rem;
 }
 .navbar__link--inactive {
   text-decoration: none;
   color: #e1e1e1;
+}
+
+.hero {
+  position: relative;
+}
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding-left: 1rem;
+  top: 4rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "avenir-bold";
+}
+.hero__image {
+  background: linear-gradient(rgba(50, 50, 50, 0.5));
+  background-image: url("../assets/images/hero-bio.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  max-width: 100vw;
+  min-height: 12rem;
 }
 /*# sourceMappingURL=bio.css.map *//*# sourceMappingURL=bio.css.map */
