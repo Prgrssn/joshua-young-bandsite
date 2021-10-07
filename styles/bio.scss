@@ -1,6 +1,6 @@
 @use "./partials/_global" as *;
-@use "./partials/fonts.scss" as *;
-@use "./partials/colours.scss" as *;
+@use "./partials/_fonts.scss" as *;
+@use "./partials/_colours.scss" as *;
 
 .navbar {
   display: flex;
