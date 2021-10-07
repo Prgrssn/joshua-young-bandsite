@@ -1,0 +1,54 @@
+@mixin flexDirection($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin imageOverlay() {
+  background-color: rgba(50, 50, 50, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+// Mixins for typography
+
+@mixin primaryHeader() {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: left;
+  font-family: "avenir-bold";
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+
+@mixin secondaryHeader() {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: "avenir-demi";
+  text-align: left;
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+
+@mixin bodyCopy() {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-reg";
+  text-align: left;
+  padding: 0 1rem 1rem 1rem;
+}
+
+@mixin footerCopy() {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-reg";
+  text-align: left;
+  padding: 1rem;
+}
+
+@mixin labelsButtons() {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-family: "avenir-bold";
+  padding: 1rem;
+}

@@ -20,6 +20,15 @@ body {
   font-family: "avenir-reg";
 }
 
+.page-header,
+.section-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: left;
+  font-family: "avenir-bold";
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -71,14 +80,15 @@ body {
 .hero__text {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  padding-left: 1rem;
-  top: 5rem;
-  bottom: 4rem;
-  color: #ffffff;
   font-size: 1.5rem;
   line-height: 2rem;
+  text-align: left;
   font-family: "avenir-bold";
+  padding: 1.5rem 1rem 1rem 1rem;
+  position: absolute;
+  top: 4rem;
+  bottom: 5rem;
+  color: #ffffff;
 }
 .hero__image {
   background-image: url("../assets/images/hero-bio.jpg");
@@ -89,12 +99,53 @@ body {
   min-height: 12rem;
   position: relative;
 }
-
-.image-overlay {
+.hero__image--overlay {
   background-color: rgba(50, 50, 50, 0.5);
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.about__quote {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-bold";
+  padding: 0.25rem 1rem;
+}
+.about__image {
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0 1rem;
+}
+
+.bio-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.bio-card__sub-header {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: "avenir-demi";
+  text-align: left;
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+.bio-card__description {
+  display: flex;
+  flex-direction: column;
+}
+.bio-card__description--text {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-reg";
+  text-align: left;
+  padding: 0 1rem 1rem 1rem;
 }/*# sourceMappingURL=bio.css.map */
