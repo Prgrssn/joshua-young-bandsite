@@ -1,6 +1,56 @@
 @use "../styles/partials/_global" as *;
 @use "../styles/partials/fonts.css" as *;
 
-body {
+* {
   font-family: "avenir-reg";
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+  align-content: center;
+  //   margin: 0 1rem;
+  //   padding: 1rem;
+
+  &__logo {
+    max-height: 1.25rem;
+    max-width: 7.5rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+    justify-self: flex-start;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
+  &__list-item {
+    list-style: none;
+    padding: 1rem 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    &--active {
+      border-bottom: 0.1875rem solid white;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+    padding: 0 1rem;
+
+    // &--active {
+    // }
+
+    &--inactive {
+      text-decoration: none;
+      color: #e1e1e1;
+    }
+  }
 }
