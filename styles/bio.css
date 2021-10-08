@@ -148,4 +148,16 @@ body {
   font-family: "avenir-reg";
   text-align: left;
   padding: 0 1rem 1rem 1rem;
+}
+
+.photo-gallery {
+  display: flex;
+  flex-direction: column;
+  background: #e1e1e1;
+}
+.photo-gallery__image {
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0 1rem 1rem 1rem;
 }/*# sourceMappingURL=bio.css.map */

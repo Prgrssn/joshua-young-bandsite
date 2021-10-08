@@ -119,3 +119,14 @@
     }
   }
 }
+
+.photo-gallery {
+  @include flexDirection(column);
+  background: $mercury;
+
+  &__image {
+    width: 100vw;
+    object-fit: cover;
+    padding: 0 1rem 1rem 1rem;
+  }
+}
