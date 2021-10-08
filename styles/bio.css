@@ -31,6 +31,7 @@ body {
   .page-header {
     font-size: 3.75rem;
     line-height: 4.25rem;
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
     font-family: "avenir-bold";
     text-align: left;
   }
@@ -49,7 +50,8 @@ body {
     line-height: 2.75rem;
     font-family: "avenir-bold";
     text-align: left;
-    padding: 1.5rem 1rem 1rem 1rem;
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+    padding-bottom: 2.25rem;
   }
 }
 
@@ -64,8 +66,6 @@ body {
   .navbar {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-content: flex-start;
   }
 }
 .navbar__logo {
@@ -79,7 +79,9 @@ body {
   .navbar__logo {
     max-height: 1.25rem;
     max-width: 7.5rem;
-    justify-self: flex-start;
+    align-self: center center;
+    margin: auto 0;
+    padding: 1rem 2.25rem 2rem 2.25rem;
   }
 }
 .navbar__list {
@@ -87,6 +89,12 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .navbar__list {
+    justify-content: space-around;
+    padding-left: 4rem;
+  }
 }
 .navbar__list-item {
   list-style: none;
@@ -104,7 +112,7 @@ body {
   .navbar__list-item--active {
     border-bottom: 0.25rem solid #ffffff;
     font-family: "avenir-bold";
-    padding: 1rem 0.5rem 1.5rem 0.5rem;
+    padding: 1rem 0 1.5rem 0;
   }
 }
 .navbar__list-item--inactive {
@@ -112,7 +120,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .navbar__list-item--inactive {
-    padding: 1rem 1rem 1.5rem 1rem;
+    padding: 1rem 1rem 1.5rem 2.25rem;
   }
 }
 .navbar__link {
@@ -141,6 +149,17 @@ body {
   bottom: 5rem;
   color: #ffffff;
 }
+@media screen and (min-width: 768px) {
+  .hero__text {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+    font-family: "avenir-bold";
+    text-align: left;
+    padding-bottom: 2.25rem;
+    top: 12rem;
+  }
+}
 .hero__image {
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
@@ -149,6 +168,12 @@ body {
   max-width: 100vw;
   min-height: 12rem;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .hero__image {
+    min-height: 70vh;
+    max-width: 100vw;
+  }
 }
 .hero__image--overlay {
   background-color: rgba(50, 50, 50, 0.5);
@@ -195,6 +220,7 @@ body {
     line-height: 2.75rem;
     font-family: "avenir-demi";
     text-align: left;
+    padding: 3rem 2.25rem 0 2.25rem;
     padding: 1rem 4rem;
   }
 }
