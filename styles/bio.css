@@ -153,11 +153,89 @@ body {
 .photo-gallery {
   display: flex;
   flex-direction: column;
-  background: #e1e1e1;
+  background: #fafafa;
 }
 .photo-gallery__image {
   width: 100vw;
   -o-object-fit: cover;
      object-fit: cover;
   padding: 0 1rem 1rem 1rem;
+}
+.photo-gallery__container {
+  padding: 0;
+  margin: 0;
+}
+
+.footer {
+  background: #323232;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+.social__header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: left;
+  font-family: "avenir-bold";
+  padding: 1.5rem 1rem 1rem 1rem;
+  color: #ffffff;
+}
+.social__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background: #323232;
+}
+.social__icons {
+  background: #323232;
+  padding: 0 1rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+.contact__info {
+  padding-left: 1rem;
+}
+.contact__info--name {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-reg";
+  text-align: left;
+  font-family: "avenir-demi";
+  color: #ffffff;
+  padding: 1rem 0;
+}
+.contact__info--address {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-reg";
+  text-align: left;
+  padding: 0.5rem 0;
+  color: #ffffff;
+}
+
+.copy-right {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  padding: 2rem 1rem;
+}
+.copy-right__logo {
+  max-height: 1.25rem;
+  max-width: 7.5rem;
+  padding: 1rem 0;
+}
+.copy-right__text {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-reg";
+  text-align: left;
+  color: #ffffff;
+  padding-top: 1rem;
 }/*# sourceMappingURL=bio.css.map */

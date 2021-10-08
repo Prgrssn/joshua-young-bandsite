@@ -58,6 +58,8 @@
   }
 }
 
+// hero section
+
 .hero {
   position: relative;
 
@@ -84,6 +86,8 @@
     }
   }
 }
+
+// about section
 
 .about {
   @include flexDirection(column);
@@ -120,13 +124,87 @@
   }
 }
 
+// photo gallery styles
+
 .photo-gallery {
   @include flexDirection(column);
-  background: $mercury;
+  background: $alabaster;
 
   &__image {
     width: 100vw;
     object-fit: cover;
     padding: 0 1rem 1rem 1rem;
+  }
+
+  &__container {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+// Footer Styles
+
+.footer {
+  background: $bandsite-black;
+}
+
+.social {
+  @include flexDirection(column);
+  align-content: flex-start;
+
+  &__header {
+    @include primaryHeader();
+    color: $white;
+  }
+
+  &__wrapper {
+    @include flexDirection(row);
+    justify-content: flex-start;
+    background: $bandsite-black;
+  }
+
+  &__icons {
+    background: $bandsite-black;
+    padding: 0 1rem;
+  }
+}
+
+.contact {
+  @include flexDirection(column);
+  align-content: flex-start;
+
+  &__info {
+    padding-left: 1rem;
+
+    &--name {
+      @include footerCopy();
+      font-family: "avenir-demi";
+      color: $white;
+      padding: 1rem 0;
+    }
+
+    &--address {
+      @include footerCopy();
+      padding: 0.5rem 0;
+      color: $white;
+    }
+  }
+}
+
+.copy-right {
+  @include flexDirection(column);
+  align-content: flex-start;
+  padding: 2rem 1rem;
+
+  &__logo {
+    max-height: 1.25rem;
+    max-width: 7.5rem;
+    padding: 1rem 0;
+  }
+
+  &__text {
+    @include footerCopy();
+    color: $white;
+    padding-top: 1rem;
   }
 }
