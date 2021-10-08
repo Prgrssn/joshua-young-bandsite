@@ -20,13 +20,37 @@ body {
   font-family: "avenir-reg";
 }
 
-.page-header,
+.page-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: left;
+  font-family: "avenir-bold";
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .page-header {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-family: "avenir-bold";
+    text-align: left;
+  }
+}
+
 .section-header {
   font-size: 1.5rem;
   line-height: 2rem;
   text-align: left;
   font-family: "avenir-bold";
   padding: 1.5rem 1rem 1rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .section-header {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: "avenir-bold";
+    text-align: left;
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
 }
 
 .navbar {
@@ -36,12 +60,27 @@ body {
   align-content: center;
   min-width: 100vw;
 }
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+}
 .navbar__logo {
   max-height: 1.25rem;
   max-width: 7.5rem;
   margin: 0 auto;
   padding: 1rem 0;
   justify-self: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .navbar__logo {
+    max-height: 1.25rem;
+    max-width: 7.5rem;
+    justify-self: flex-start;
+  }
 }
 .navbar__list {
   display: flex;
@@ -61,8 +100,20 @@ body {
   padding-left: 2.75rem;
   padding-right: 3rem;
 }
+@media screen and (min-width: 768px) {
+  .navbar__list-item--active {
+    border-bottom: 0.25rem solid #ffffff;
+    font-family: "avenir-bold";
+    padding: 1rem 0.5rem 1.5rem 0.5rem;
+  }
+}
 .navbar__list-item--inactive {
   padding-right: 3.75rem;
+}
+@media screen and (min-width: 768px) {
+  .navbar__list-item--inactive {
+    padding: 1rem 1rem 1.5rem 1rem;
+  }
 }
 .navbar__link {
   text-decoration: none;
@@ -138,9 +189,25 @@ body {
   text-align: left;
   padding: 1.5rem 1rem 1rem 1rem;
 }
+@media screen and (min-width: 768px) {
+  .bio-card__sub-header {
+    font-size: 1.5rem;
+    line-height: 2.75rem;
+    font-family: "avenir-demi";
+    text-align: left;
+    padding: 1rem 4rem;
+  }
+}
 .bio-card__description {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .bio-card__description {
+    display: flex;
+    flex-direction: row;
+    padding: 0 3rem;
+  }
 }
 .bio-card__description--text {
   font-size: 0.8125rem;
