@@ -338,20 +338,24 @@ body {
 }
 @media screen and (min-width: 768px) {
   .photo-gallery__image {
-    max-height: 30vh;
-    max-width: 30vw;
     padding: 0.5rem;
+    max-width: 100%;
   }
 }
 @media screen and (min-width: 1280px) {
   .photo-gallery__image {
     padding: 0;
-    max-width: 100%;
   }
 }
 .photo-gallery__container {
   padding: 0;
   margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .photo-gallery__container {
+    max-width: 30vw;
+    max-height: 30vh;
+  }
 }
 @media screen and (min-width: 1280px) {
   .photo-gallery__container {
@@ -367,6 +371,11 @@ body {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-evenly;
+    padding: 0 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photo-gallery__wrapper {
     padding: 0 5rem;
   }
 }
@@ -379,6 +388,11 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    padding: 0 5rem;
   }
 }
 
@@ -409,6 +423,11 @@ body {
     font-weight: 700;
     text-align: left;
     padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .social__header {
+    padding: 3rem 2.25rem 2.25rem 0.5rem;
   }
 }
 .social__wrapper {
@@ -453,6 +472,11 @@ body {
     justify-content: space-evenly;
     padding-left: 0rem;
     width: 30vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contact__info {
+    padding: 0;
   }
 }
 .contact__info--name {
@@ -514,6 +538,11 @@ body {
     right: 3rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .copy-right__logo {
+    right: 6rem;
+  }
+}
 .copy-right__text {
   font-size: 0.8125rem;
   line-height: 1.125rem;
@@ -529,5 +558,10 @@ body {
     font-family: "avenir-reg";
     text-align: left;
     padding-left: 1.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .copy-right__text {
+    padding-left: 0rem;
   }
 }/*# sourceMappingURL=bio.css.map */

@@ -258,30 +258,29 @@
     padding-bottom: 2.25rem;
   }
 
-  // @include desktop {
-  //   padding: 0 4rem;
-  // }
-
   &__image {
     width: 100vw;
     object-fit: cover;
     padding: 0 1rem 1rem 1rem;
 
     @include tablet {
-      max-height: 30vh;
-      max-width: 30vw;
       padding: 0.5rem;
+      max-width: 100%;
     }
 
     @include desktop {
       padding: 0;
-      max-width: 100%;
     }
   }
 
   &__container {
     padding: 0;
     margin: 0;
+
+    @include tablet {
+      max-width: 30vw;
+      max-height: 30vh;
+    }
 
     @include desktop {
       max-width: 28vw;
@@ -296,16 +295,15 @@
       flex-wrap: wrap;
       justify-content: space-evenly;
       align-content: space-evenly;
-      padding: 0 5rem;
+      padding: 0 1.5rem;
     }
   }
 
-  // @include desktop {
-  //   &__wrapper {
-  //     padding: 0 5rem;
-  //     justify-content: space-around;
-  //   }
-  // }
+  @include desktop {
+    &__wrapper {
+      padding: 0 5rem;
+    }
+  }
 }
 
 // Footer Styles
@@ -316,6 +314,10 @@
   @include tablet {
     @include flexDirection(column);
     position: relative;
+  }
+
+  @include desktop {
+    padding: 0 5rem;
   }
 }
 
@@ -334,6 +336,10 @@
     @include tablet {
       @include sectionHeader();
       padding: 3rem 2.25rem 2.25rem 2.25rem;
+    }
+
+    @include desktop {
+      padding: 3rem 2.25rem 2.25rem 0.5rem;
     }
   }
 
@@ -374,6 +380,10 @@
       justify-content: space-evenly;
       padding-left: 0rem;
       width: 30vw;
+    }
+
+    @include desktop {
+      padding: 0;
     }
 
     &--name {
@@ -420,6 +430,10 @@
       top: 3rem;
       right: 3rem;
     }
+
+    @include desktop {
+      right: 6rem;
+    }
   }
 
   &__text {
@@ -430,6 +444,10 @@
     @include tablet {
       @include footerCopy();
       padding-left: 1.25rem;
+    }
+
+    @include desktop {
+      padding-left: 0rem;
     }
   }
 }
