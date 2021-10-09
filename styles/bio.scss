@@ -272,11 +272,22 @@
       max-width: 30vw;
       padding: 0.5rem;
     }
+
+    @include desktop {
+      padding: 0;
+      max-width: 100%;
+    }
   }
 
   &__container {
     padding: 0;
     margin: 0;
+
+    @include desktop {
+      max-width: 28vw;
+      max-height: 20vh;
+      padding: 0.5rem;
+    }
   }
 
   @include tablet {
@@ -285,15 +296,16 @@
       flex-wrap: wrap;
       justify-content: space-evenly;
       align-content: space-evenly;
-      padding: 0 1.5rem;
+      padding: 0 5rem;
     }
   }
 
-  @include desktop {
-    &__wrapper {
-      padding: 0 3rem;
-    }
-  }
+  // @include desktop {
+  //   &__wrapper {
+  //     padding: 0 5rem;
+  //     justify-content: space-around;
+  //   }
+  // }
 }
 
 // Footer Styles
