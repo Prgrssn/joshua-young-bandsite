@@ -370,10 +370,10 @@
     @include mFooterCopy();
     color: $white;
     padding-top: 1rem;
-    padding-left: 1rem;
 
     @include tablet {
       @include footerCopy();
+      padding-left: 1.25rem;
     }
   }
 }
