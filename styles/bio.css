@@ -55,7 +55,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .section-header {
-    padding-left: 6rem;
+    padding-left: 8rem;
   }
 }
 
@@ -176,7 +176,7 @@ body {
 @media screen and (min-width: 1280px) {
   .hero__text {
     left: 5rem;
-    top: 15rem;
+    top: 12rem;
   }
 }
 .hero__image {
@@ -236,14 +236,14 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .about__quote {
-    padding: 2.25rem 21rem 0 11rem;
+    padding: 2.25rem 21rem 0 13rem;
   }
   .about__quote--cite {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-family: "avenir-reg";
     text-align: left;
-    padding: 0.5rem 11rem;
+    padding: 0.5rem 13rem;
     font-family: "avenir-demi";
     font-weight: 200;
   }
@@ -263,7 +263,8 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .about__image {
-    padding: 0 11rem;
+    padding: 0 13rem;
+    height: 60vh;
   }
 }
 
@@ -290,7 +291,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .bio-card__sub-header {
-    padding-left: 11rem;
+    padding-left: 13rem;
   }
 }
 .bio-card__description {
@@ -306,7 +307,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .bio-card__description {
-    padding: 0 10rem 2.5rem 10rem;
+    padding: 0 12rem 2.5rem 12rem;
   }
 }
 .bio-card__description--text {
@@ -368,7 +369,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .photo-gallery__container {
-    max-width: 27vw;
+    max-width: 25vw;
     height: auto;
     padding: 0.5rem;
     margin: 0.5rem;
@@ -386,7 +387,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .photo-gallery__wrapper {
-    padding: 0 5rem;
+    padding: 0 6.5rem;
   }
 }
 
@@ -402,7 +403,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .footer {
-    padding: 0 5.375rem;
+    padding: 0 8rem;
   }
 }
 
@@ -558,7 +559,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .copy-right__logo {
-    right: 6.5rem;
+    right: 8.5rem;
   }
 }
 .copy-right__text {
