@@ -392,7 +392,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .footer {
-    padding: 0 5rem;
+    padding: 0 5.375rem;
   }
 }
 
@@ -464,6 +464,12 @@ body {
     padding: 0 1.5rem 2.25rem 1.5rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .contact {
+    padding: 0 0.75rem 1rem 0.75rem;
+    justify-content: flex-start;
+  }
+}
 .contact__info {
   padding-left: 1rem;
 }
@@ -476,7 +482,8 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .contact__info {
-    padding: 0;
+    justify-content: flex-start;
+    width: 20vw;
   }
 }
 .contact__info--name {

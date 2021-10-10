@@ -317,7 +317,7 @@
   }
 
   @include desktop {
-    padding: 0 5rem;
+    padding: 0 5.375rem;
   }
 }
 
@@ -373,6 +373,11 @@
     padding: 0 1.5rem 2.25rem 1.5rem;
   }
 
+  @include desktop {
+    padding: 0 0.75rem 1rem 0.75rem;
+    justify-content: flex-start;
+  }
+
   &__info {
     padding-left: 1rem;
 
@@ -383,7 +388,8 @@
     }
 
     @include desktop {
-      padding: 0;
+      justify-content: flex-start;
+      width: 20vw;
     }
 
     &--name {
