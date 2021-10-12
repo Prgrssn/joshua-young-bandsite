@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "avenir-reg";
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
+}
+@font-face {
+  font-family: "avenir-bold";
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf);
+}
+@font-face {
+  font-family: "avenir-demi";
+  src: url(../../assets/fonts/AvenirNextLTPro-Demi.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "avenir-reg";
+}/*# sourceMappingURL=show.css.map */
