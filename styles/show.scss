@@ -2,3 +2,290 @@
 @use "./partials/mixins" as *;
 @use "./partials/fonts" as *;
 @use "./partials/colours" as *;
+
+// Nav Styles
+.navbar {
+  @include flexDirection(column);
+  background-color: $bandsite-black;
+  align-content: center;
+  min-width: 100vw;
+
+  @include tablet {
+    @include flexDirection(row);
+  }
+
+  @include desktop {
+    padding-left: 5rem;
+  }
+
+  &__logo {
+    max-height: 1.25rem;
+    max-width: 7.5rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+    justify-self: flex-start;
+
+    @include tablet {
+      max-height: 1.25rem;
+      max-width: 7.5rem;
+      align-self: center center;
+      margin: auto 0;
+      padding: 1rem 2.25rem 2rem 2.25rem;
+    }
+  }
+
+  &__list {
+    @include flexDirection(row);
+    justify-content: space-between;
+    padding-top: 1rem;
+
+    @include tablet {
+      justify-content: space-around;
+      padding-left: 4rem;
+    }
+  }
+
+  &__list-item {
+    list-style: none;
+    padding: 1rem;
+    display: flex;
+    align-content: center;
+
+    &:hover {
+      color: $mercury;
+      filter: brightness(300%);
+      border-bottom: 0.25rem solid $bandsite-darkblack;
+    }
+
+    &--active {
+      border-bottom: 0.25rem solid $white;
+      font-family: "avenir-bold";
+      padding-left: 2.75rem;
+      padding-right: 3rem;
+
+      @include tablet {
+        border-bottom: 0.25rem solid $white;
+        font-family: "avenir-bold";
+        padding: 1rem 0 1.5rem 0;
+      }
+    }
+
+    &--inactive {
+      padding-right: 3.75rem;
+      margin-left: 1rem;
+
+      @include tablet {
+        padding: 1rem 1rem 1.5rem 1rem;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $white;
+    font-size: 0.875rem;
+
+    &--inactive {
+      text-decoration: none;
+      color: $mercury;
+    }
+  }
+}
+
+// hero section
+
+.hero {
+  position: relative;
+
+  &__text {
+    @include flexDirection(column);
+    @include mPrimaryHeader();
+    position: absolute;
+    top: 4rem;
+    color: $white;
+
+    @include tablet {
+      @include pageHeader();
+      padding: 2.25rem;
+      top: 10rem;
+    }
+
+    @include desktop {
+      left: 5rem;
+      top: 12rem;
+    }
+  }
+
+  &__image {
+    background-image: url("../assets/images/hero-shows.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    object-fit: cover;
+    max-width: 100vw;
+    height: 12rem;
+    position: relative;
+
+    @include tablet {
+      height: 60vh;
+      max-width: 100vw;
+    }
+
+    &--overlay {
+      @include imageOverlay;
+    }
+  }
+}
+
+// Footer Styles
+
+.footer {
+  background: $bandsite-black;
+
+  @include tablet {
+    @include flexDirection(column);
+    position: relative;
+  }
+
+  @include desktop {
+    padding: 0 8rem;
+  }
+}
+
+.social {
+  @include flexDirection(column);
+  align-content: flex-start;
+
+  @include tablet {
+    @include flexDirection(row);
+  }
+
+  &__header {
+    @include mPrimaryHeader();
+    color: $white;
+
+    @include tablet {
+      @include sectionHeader();
+      padding: 3rem 2.25rem 2.25rem 2.25rem;
+    }
+
+    @include desktop {
+      padding: 3rem 2.25rem 2.25rem 0.5rem;
+    }
+  }
+
+  &__wrapper {
+    @include flexDirection(row);
+    justify-content: flex-start;
+    background: $bandsite-black;
+
+    @include tablet {
+      align-content: flex-end;
+    }
+  }
+
+  &__icons {
+    background: $bandsite-black;
+    padding: 0 1rem;
+
+    @include tablet {
+      padding-top: 4rem;
+    }
+  }
+}
+
+.contact {
+  @include flexDirection(column);
+  align-content: flex-start;
+
+  @include tablet {
+    @include flexDirection(row);
+    justify-content: space-evenly;
+    padding: 0 1.5rem 2.25rem 1.5rem;
+  }
+
+  @include desktop {
+    padding: 0 0.75rem 1rem 0.75rem;
+    justify-content: flex-start;
+  }
+
+  &__info {
+    padding-left: 1rem;
+
+    @include tablet {
+      justify-content: space-evenly;
+      padding-left: 0rem;
+      width: 30vw;
+    }
+
+    @include desktop {
+      justify-content: flex-start;
+      width: 20vw;
+    }
+
+    &--name {
+      @include mFooterCopy();
+      font-family: "avenir-demi";
+      color: $white;
+      padding: 1rem 0;
+
+      @include tablet {
+        @include footerCopy();
+        font-family: "avenir-demi";
+      }
+    }
+
+    &--address {
+      @include mFooterCopy();
+      padding: 0.5rem 0;
+      color: $white;
+      text-decoration: none;
+
+      @include tablet {
+        @include footerCopy();
+      }
+    }
+  }
+}
+
+.copy-right {
+  @include flexDirection(column);
+  align-content: flex-start;
+  padding: 2rem 1rem;
+
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 2.25rem;
+  }
+
+  &__logo {
+    max-height: 1.25rem;
+    max-width: 7.5rem;
+    padding: 1rem 0;
+
+    @include tablet {
+      position: absolute;
+      top: 3rem;
+      right: 3rem;
+    }
+
+    @include desktop {
+      right: 8.5rem;
+    }
+  }
+
+  &__text {
+    @include mFooterCopy();
+    color: $white;
+    padding-top: 1rem;
+
+    @include tablet {
+      @include footerCopy();
+      padding-left: 1.25rem;
+    }
+
+    @include desktop {
+      padding-left: 0rem;
+    }
+  }
+}
