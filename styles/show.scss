@@ -104,7 +104,7 @@
     position: absolute;
     top: 2rem;
     color: $white;
-    padding-right: 4rem;
+    padding: 1.5rem 1rem 1rem 1rem;
 
     @include tablet {
       @include pageHeader();
@@ -120,6 +120,7 @@
     &--album-name {
       @include mSecondaryHeader();
       color: $white;
+      padding: 1.5rem 1rem 1rem 1rem;
     }
   }
 
@@ -157,6 +158,61 @@
   }
 }
 
+// Shows Section
+
+.shows-section {
+  @include flexDirection(column);
+  // padding: 0 1rem;
+
+  &__header {
+    @include mPrimaryHeader;
+    padding: 1.5rem 0;
+  }
+}
+
+.show-table {
+  @include flexDirection(column);
+  padding: 1rem 0;
+
+  &__row {
+    @include flexDirection(column);
+    border-bottom: 0.0625rem solid $silver;
+    padding: 1rem;
+  }
+
+  &__subheader {
+    @include flexDirection(column);
+
+    &--text {
+      @include mBodyCopy();
+      color: $silver;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  &__content {
+    @include mBodyCopy();
+    padding: 0.5rem 0;
+
+    &--dates {
+      @include mBodyCopy();
+      font-family: "avenir-demi";
+      padding: 0.5rem 0;
+    }
+  }
+
+  &__button {
+    font-family: "avenir-demi";
+    background: $bandsite-black;
+    color: $white;
+    border: none;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+  }
+}
+
 // Footer Styles
 
 .footer {
@@ -183,6 +239,7 @@
   &__header {
     @include mPrimaryHeader();
     color: $white;
+    padding: 1.5rem 1rem 1rem 1rem;
 
     @include tablet {
       @include sectionHeader();

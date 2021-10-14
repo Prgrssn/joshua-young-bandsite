@@ -6,42 +6,42 @@ const showsArray = [
     Date: "Mon Sept 06 2021",
     Venue: "Ronald Lane",
     Location: "San Francisco, CA",
-    Tickets: "Buy Tickets",
+    Tickets: "BUY TICKETS",
   },
   {
     ID: 2,
     Date: "Tue Sept 21 2021",
     Venue: "Pier 3 East ",
     Location: "San Francisco, CA",
-    Tickets: "Buy Tickets",
+    Tickets: "BUY TICKETS",
   },
   {
     ID: 3,
     Date: "Fri Oct 15 2021",
     Venue: "View Lounge ",
     Location: "San Francisco, CA",
-    Tickets: "Buy Tickets",
+    Tickets: "BUY TICKETS",
   },
   {
     ID: 4,
     Date: "Sat Nov 06 2021",
     Venue: "Hyatt Agency",
     Location: "San Francisco, CA",
-    Tickets: "Buy Tickets",
+    Tickets: "BUY TICKETS",
   },
   {
     ID: 5,
     Date: "Fri Nov 26 2021",
     Venue: "Moscow Center",
     Location: "San Francisco, CA",
-    Tickets: "Buy Tickets",
+    Tickets: "BUY TICKETS",
   },
   {
     ID: 6,
     Date: "Wed Dec 15 2021",
     Venue: "Press Club",
     Location: "San Francisco, CA",
-    Tickets: "Buy Tickets",
+    Tickets: "BUY TICKETS",
   },
 ];
 
@@ -96,22 +96,22 @@ const displayShowsTable = (showsArray) => {
     showTableBody.appendChild(tableRow);
 
     const tableRowDate = document.createElement("td");
-    tableRowDate.classList.add("shows-table__dates");
+    tableRowDate.classList.add("show-table__content--dates");
     tableRowDate.innerText = showsArray[i].Date;
     tableRow.appendChild(tableRowDate);
 
     const tableRowVenue = document.createElement("td");
-    tableRowVenue.classList.add("shows-table__row-title");
+    tableRowVenue.classList.add("show-table__content");
     tableRowVenue.innerText = showsArray[i].Venue;
     tableRow.appendChild(tableRowVenue);
 
     const tableRowLocation = document.createElement("td");
-    tableRowLocation.classList.add("shows-table__row-title");
+    tableRowLocation.classList.add("show-table__content");
     tableRowLocation.innerText = showsArray[i].Location;
     tableRow.appendChild(tableRowLocation);
 
     const tableRowButton = document.createElement("button");
-    tableRowButton.classList.add("shows-table__button");
+    tableRowButton.classList.add("show-table__button");
     tableRowButton.innerText = showsArray[i].Tickets;
     tableRow.appendChild(tableRowButton);
   }

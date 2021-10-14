@@ -12,6 +12,7 @@
 }
 .section-header {
   @include mPrimaryHeader();
+  padding: 1.5rem 1rem 1rem 1rem;
 
   @include tablet {
     @include sectionHeader();
@@ -122,6 +123,7 @@
     position: absolute;
     top: 4rem;
     color: $white;
+    padding: 1.5rem 1rem 1rem 1rem;
 
     @include tablet {
       @include pageHeader();
@@ -219,6 +221,7 @@
 
   &__sub-header {
     @include mSecondaryHeader();
+    padding: 1.5rem 1rem 1rem 1rem;
 
     @include tablet {
       @include subHeader();
@@ -243,6 +246,7 @@
     }
     &--text {
       @include mBodyCopy();
+      padding: 0 1rem 1rem 1rem;
 
       @include tablet() {
         @include bodyCopy();
@@ -341,6 +345,7 @@
   &__header {
     @include mPrimaryHeader();
     color: $white;
+    padding: 1.5rem 1rem 1rem 1rem;
 
     @include tablet {
       @include sectionHeader();

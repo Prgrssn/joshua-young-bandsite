@@ -120,11 +120,10 @@ body {
   line-height: 2rem;
   text-align: left;
   font-family: "avenir-bold";
-  padding: 1.5rem 1rem 1rem 1rem;
   position: absolute;
   top: 2rem;
   color: #ffffff;
-  padding-right: 4rem;
+  padding: 1.5rem 1rem 1rem 1rem;
 }
 @media screen and (min-width: 768px) {
   .hero__text {
@@ -147,8 +146,8 @@ body {
   line-height: 1.375rem;
   font-family: "avenir-demi";
   text-align: left;
-  padding: 1.5rem 1rem 1rem 1rem;
   color: #ffffff;
+  padding: 1.5rem 1rem 1rem 1rem;
 }
 .hero__image {
   background-image: url("../assets/images/hero-shows.jpg");
@@ -188,6 +187,67 @@ body {
   bottom: 1rem;
 }
 
+.shows-section {
+  display: flex;
+  flex-direction: column;
+}
+.shows-section__header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: left;
+  font-family: "avenir-bold";
+  padding: 1.5rem 0;
+}
+
+.show-table {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+.show-table__row {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0.0625rem solid #afafaf;
+  padding: 1rem;
+}
+.show-table__subheader {
+  display: flex;
+  flex-direction: column;
+}
+.show-table__subheader--text {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-reg";
+  text-align: left;
+  color: #afafaf;
+  padding: 0.5rem 1rem;
+}
+.show-table__content {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-reg";
+  text-align: left;
+  padding: 0.5rem 0;
+}
+.show-table__content--dates {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-reg";
+  text-align: left;
+  font-family: "avenir-demi";
+  padding: 0.5rem 0;
+}
+.show-table__button {
+  font-family: "avenir-demi";
+  background: #323232;
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+}
+
 .footer {
   background: #323232;
 }
@@ -220,8 +280,8 @@ body {
   line-height: 2rem;
   text-align: left;
   font-family: "avenir-bold";
-  padding: 1.5rem 1rem 1rem 1rem;
   color: #ffffff;
+  padding: 1.5rem 1rem 1rem 1rem;
 }
 @media screen and (min-width: 768px) {
   .social__header {

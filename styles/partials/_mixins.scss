@@ -19,7 +19,6 @@
   line-height: 2rem;
   text-align: left;
   font-family: "avenir-bold";
-  padding: 1.5rem 1rem 1rem 1rem;
 }
 
 @mixin mSecondaryHeader() {
@@ -27,7 +26,6 @@
   line-height: 1.375rem;
   font-family: "avenir-demi";
   text-align: left;
-  padding: 1.5rem 1rem 1rem 1rem;
 }
 
 @mixin mBodyCopy() {
@@ -35,7 +33,6 @@
   line-height: 1.125rem;
   font-family: "avenir-reg";
   text-align: left;
-  padding: 0 1rem 1rem 1rem;
 }
 
 @mixin mFooterCopy() {

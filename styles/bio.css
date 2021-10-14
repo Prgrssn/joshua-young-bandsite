@@ -25,7 +25,6 @@ body {
   line-height: 2rem;
   text-align: left;
   font-family: "avenir-bold";
-  padding: 1.5rem 1rem 1rem 1rem;
 }
 @media screen and (min-width: 768px) {
   .page-header {
@@ -158,10 +157,10 @@ body {
   line-height: 2rem;
   text-align: left;
   font-family: "avenir-bold";
-  padding: 1.5rem 1rem 1rem 1rem;
   position: absolute;
   top: 4rem;
   color: #ffffff;
+  padding: 1.5rem 1rem 1rem 1rem;
 }
 @media screen and (min-width: 768px) {
   .hero__text {
@@ -423,8 +422,8 @@ body {
   line-height: 2rem;
   text-align: left;
   font-family: "avenir-bold";
-  padding: 1.5rem 1rem 1rem 1rem;
   color: #ffffff;
+  padding: 1.5rem 1rem 1rem 1rem;
 }
 @media screen and (min-width: 768px) {
   .social__header {
