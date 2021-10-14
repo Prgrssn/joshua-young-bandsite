@@ -196,7 +196,17 @@ body {
   line-height: 2rem;
   text-align: left;
   font-family: "avenir-bold";
-  padding: 1.5rem 0;
+  padding: 1.5rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .shows-section__header {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: "avenir-reg";
+    font-weight: 700;
+    text-align: left;
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
 }
 
 .show-table {
@@ -204,15 +214,35 @@ body {
   flex-direction: column;
   padding: 1rem 0;
 }
+@media screen and (min-width: 768px) {
+  .show-table {
+    padding: 1rem;
+  }
+}
 .show-table__row {
   display: flex;
   flex-direction: column;
   border-bottom: 0.0625rem solid #afafaf;
   padding: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .show-table__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.25rem 1rem;
+  }
+}
 .show-table__subheader {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .show-table__subheader {
+    display: flex;
+    flex-direction: row;
+    padding: 0 2.25rem 1rem 1.25rem;
+  }
 }
 .show-table__subheader--text {
   font-size: 0.8125rem;
@@ -220,7 +250,17 @@ body {
   font-family: "avenir-reg";
   text-align: left;
   color: #afafaf;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.25rem;
+}
+@media screen and (min-width: 768px) {
+  .show-table__subheader--text {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "avenir-reg";
+    text-align: left;
+    margin-right: 9rem;
+    font-family: "avenir-demi";
+  }
 }
 .show-table__content {
   font-size: 0.8125rem;
@@ -229,6 +269,14 @@ body {
   text-align: left;
   padding: 0.5rem 0;
 }
+@media screen and (min-width: 768px) {
+  .show-table__content {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "avenir-reg";
+    text-align: left;
+  }
+}
 .show-table__content--dates {
   font-size: 0.8125rem;
   line-height: 1.125rem;
@@ -236,6 +284,15 @@ body {
   text-align: left;
   font-family: "avenir-demi";
   padding: 0.5rem 0;
+}
+@media screen and (min-width: 768px) {
+  .show-table__content--dates {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "avenir-reg";
+    text-align: left;
+    text-align: center;
+  }
 }
 .show-table__button {
   font-family: "avenir-demi";
@@ -246,6 +303,17 @@ body {
   text-align: center;
   border-radius: 0.25rem;
   margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .show-table__button {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "avenir-reg";
+    text-align: left;
+    align-self: center;
+    justify-self: center;
+    margin: 0;
+  }
 }
 
 .footer {
