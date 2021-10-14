@@ -176,10 +176,15 @@ body {
   right: 0;
 }
 .hero__sound {
-  padding: 0 1rem;
   -o-object-fit: cover;
      object-fit: cover;
+  height: auto;
+  max-width: 100%;
+  min-height: 20%;
+}
+.hero__sound-container {
   position: absolute;
+  padding: 0 1rem;
   bottom: 1rem;
 }
 
