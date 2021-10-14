@@ -61,29 +61,31 @@ displayShowsSectionHeader();
 
 // Shows table Construction:
 
-const displayShowsTable = (showsArray) => {
+const displayShows = (showsArray) => {
   const showTable = document.createElement("table");
   showTable.classList.add("show-table");
   showSection.appendChild(showTable);
 
-  const tableSubheader = document.createElement("thead");
-  tableSubheader.classList.add("show-table__subheader");
-  showTable.appendChild(tableSubheader);
+  // outside
 
-  const tableSubheaderDate = document.createElement("td");
-  tableSubheaderDate.classList.add("show-table__subheader--text");
-  tableSubheaderDate.innerText = "Date";
-  tableSubheader.appendChild(tableSubheaderDate);
+  // const tableSubheader = document.createElement("thead");
+  // tableSubheader.classList.add("show-table__subheader--outside");
+  // showTable.appendChild(tableSubheader);
 
-  const tableSubheaderVenue = document.createElement("td");
-  tableSubheaderVenue.classList.add("show-table__subheader--text");
-  tableSubheaderVenue.innerText = "Venue";
-  tableSubheader.appendChild(tableSubheaderVenue);
+  // const tableSubheaderDate = document.createElement("td");
+  // tableSubheaderDate.classList.add("show-table__subheader--text");
+  // tableSubheaderDate.innerText = "Date";
+  // tableSubheader.appendChild(tableSubheaderDate);
 
-  const tableSubheaderLocation = document.createElement("td");
-  tableSubheaderLocation.classList.add("show-table__subheader--text");
-  tableSubheaderLocation.innerText = "Location";
-  tableSubheader.appendChild(tableSubheaderLocation);
+  // const tableSubheaderVenue = document.createElement("td");
+  // tableSubheaderVenue.classList.add("show-table__subheader--text");
+  // tableSubheaderVenue.innerText = "Venue";
+  // tableSubheader.appendChild(tableSubheaderVenue);
+
+  // const tableSubheaderLocation = document.createElement("td");
+  // tableSubheaderLocation.classList.add("show-table__subheader--text");
+  // tableSubheaderLocation.innerText = "Location";
+  // tableSubheader.appendChild(tableSubheaderLocation);
 
   const showTableBody = document.createElement("tbody");
   showTableBody.classList.add("show-table__body");
@@ -94,6 +96,25 @@ const displayShowsTable = (showsArray) => {
     const tableRow = document.createElement("tr");
     tableRow.classList.add("show-table__row");
     showTableBody.appendChild(tableRow);
+
+    const tableSubheader = document.createElement("thead");
+    tableSubheader.classList.add("show-table__subheader");
+    tableRow.appendChild(tableSubheader);
+
+    const tableSubheaderDate = document.createElement("th");
+    tableSubheaderDate.classList.add("show-table__subheader--text");
+    tableSubheaderDate.innerText = "Date";
+    tableSubheader.appendChild(tableSubheaderDate);
+
+    const tableSubheaderVenue = document.createElement("th");
+    tableSubheaderVenue.classList.add("show-table__subheader--text");
+    tableSubheaderVenue.innerText = "Venue";
+    tableSubheader.appendChild(tableSubheaderVenue);
+
+    const tableSubheaderLocation = document.createElement("th");
+    tableSubheaderLocation.classList.add("show-table__subheader--text");
+    tableSubheaderLocation.innerText = "Location";
+    tableSubheader.appendChild(tableSubheaderLocation);
 
     const tableRowDate = document.createElement("td");
     tableRowDate.classList.add("show-table__content--dates");
@@ -110,6 +131,8 @@ const displayShowsTable = (showsArray) => {
     tableRowLocation.innerText = showsArray[i].Location;
     tableRow.appendChild(tableRowLocation);
 
+    // button
+
     const tableRowButton = document.createElement("button");
     tableRowButton.classList.add("show-table__button");
     tableRowButton.innerText = showsArray[i].Tickets;
@@ -117,4 +140,4 @@ const displayShowsTable = (showsArray) => {
   }
 };
 
-displayShowsTable(showsArray);
+displayShows(showsArray);

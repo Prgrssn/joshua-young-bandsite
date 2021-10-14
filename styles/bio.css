@@ -390,6 +390,55 @@ body {
   }
 }
 
+.comment-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+.comment-section__header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: left;
+  font-family: "avenir-bold";
+  padding-top: 1.5rem;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+}
+.comment-form__label {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: "avenir-demi";
+  text-align: left;
+  color: #afafaf;
+  padding: 1rem 0 0.5rem 0;
+}
+
+#comment-form__name {
+  padding: 0.25rem;
+}
+
+#comment-form__box {
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#comment-form__button {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: "avenir-demi";
+  text-align: left;
+  text-align: center;
+  background: #323232;
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
 .footer {
   background: #323232;
 }

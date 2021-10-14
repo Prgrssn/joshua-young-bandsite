@@ -319,6 +319,47 @@
   }
 }
 
+// Comment Section Styles
+
+.comment-section {
+  @include flexDirection(column);
+  padding: 0 1rem;
+
+  &__header {
+    @include mPrimaryHeader;
+    padding-top: 1.5rem;
+  }
+}
+
+.comment-form {
+  @include flexDirection(column);
+
+  &__label {
+    @include mSecondaryHeader;
+    color: $silver;
+    padding: 1rem 0 0.5rem 0;
+  }
+}
+
+#comment-form__name {
+  padding: 0.25rem;
+}
+
+#comment-form__box {
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#comment-form__button {
+  @include mSecondaryHeader;
+  text-align: center;
+  background: $bandsite-black;
+  color: $white;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
 // Footer Styles
 
 .footer {
