@@ -19,36 +19,41 @@ const commentArr = [
 console.log(commentArr);
 
 // Comments Section
+const commentContainer = document.querySelector(
+  "#comment-section__card-container"
+);
 
-const displayComment = () => {
-  const commentContainer = document.querySelector(
-    "#comment-section__card-container"
-  );
+// build comment card element
 
-  for (i = 0; i < commentArr.length; i++) {
-    const cardEl = document.createElement("article");
-    cardEl.classList.add("comment-card");
+const buildCard = (obj) => {
+  const cardEl = document.createElement("article");
+  cardEl.classList.add("comment-card");
 
-    const commentName = document.createElement("h3");
-    commentName.classList.add("comment-card__name");
-    commentName.innerText = commentArr[i].name;
+  const commentName = document.createElement("h3");
+  commentName.classList.add("comment-card__name");
+  commentName.innerText = obj.name;
 
-    const commentDate = document.createElement("span");
-    commentDate.classList.add("comment-card__date");
-    commentDate.innerText = commentArr[i].date;
+  const commentDate = document.createElement("div");
+  commentDate.classList.add("comment-card__date");
+  commentDate.innerText = obj.date;
 
-    const commentText = document.createElement("span");
-    commentText.classList.add("comment-card__text");
-    commentText.innerText = commentArr[i].text;
+  const commentText = document.createElement("div");
+  commentText.classList.add("comment-card__text");
+  commentText.innerText = obj.text;
 
-    cardEl.appendChild(commentName);
-    cardEl.appendChild(commentDate);
-    cardEl.appendChild(commentText);
-    commentContainer.appendChild(cardEl);
-  }
+  cardEl.appendChild(commentName);
+  cardEl.appendChild(commentDate);
+  cardEl.appendChild(commentText);
+  commentContainer.appendChild(cardEl);
 };
 
-displayComment();
+const displayComment = () => {
+  commentContainer.innerHTML = "";
+
+  for (let i = 0; i < commentArr.length; i++) {
+    buildCard(commentArr[i]);
+  }
+};
 
 // Event listener on submit
 
@@ -61,8 +66,11 @@ const handleCommentSubmit = (event) => {
     text: event.target.comment.value,
   };
 
-  commentArr.push(commentData);
+  commentArr.unshift(commentData);
+  displayComment();
 };
 
 const formEl = document.querySelector("#comment-form");
 formEl.addEventListener("submit", handleCommentSubmit);
+
+displayComment();
