@@ -120,7 +120,6 @@ const displayShows = (showsArray) => {
     tableRowDate.classList.add("show-table__content--dates");
     tableRowDate.innerText = showsArray[i].Date;
     tableRow.appendChild(tableRowDate);
-    console.log(tableRowDate);
 
     const tableRowVenue = document.createElement("td");
     tableRowVenue.classList.add("show-table__content");

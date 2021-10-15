@@ -20,50 +20,37 @@ console.log(commentArr);
 
 // Comments Section
 
-const createCommentCard = (comment) => {
-  // creating the comment card <article></article>
-  const cardEl = document.createElement("article");
-  cardEl.classList.add("comment-card");
+const displayComment = () => {
+  const commentContainer = document.querySelector(
+    "#comment-section__card-container"
+  );
 
-  // creating the name header container to the comment card <h3></h3>
-  const commentName = document.createElement("h3");
-  commentName.classList.add("comment-card__name");
-  commentName.innerText = commentArr[i].name;
+  for (i = 0; i < commentArr.length; i++) {
+    const cardEl = document.createElement("article");
+    cardEl.classList.add("comment-card");
 
-  // creating the date span container to the comment card <span></span>
-  const commentDate = document.createElement("span");
-  commentDate.classList.add("comment-card__date");
-  commentDate.innerText = commentArr[i].date;
+    const commentName = document.createElement("h3");
+    commentName.classList.add("comment-card__name");
+    commentName.innerText = commentArr[i].name;
 
-  // creating the comment text container to the comment card <span></span>
-  const commentText = document.createElement("span");
-  commentText.classList.add("comment-card__comment");
-  commentText.innerText = commentArr[i].text;
+    const commentDate = document.createElement("span");
+    commentDate.classList.add("comment-card__date");
+    commentDate.innerText = commentArr[i].date;
 
-  // adding the name to the comment card
-  cardEl.appendChild(commentName);
-  // adding the date to the comment card
-  cardEl.appendChild(commentDate);
-  // adding the comment to the comment card
-  cardEl.appendChild(commentText);
+    const commentText = document.createElement("span");
+    commentText.classList.add("comment-card__text");
+    commentText.innerText = commentArr[i].text;
+
+    cardEl.appendChild(commentName);
+    cardEl.appendChild(commentDate);
+    cardEl.appendChild(commentText);
+    commentContainer.appendChild(cardEl);
+  }
 };
 
-createCommentCard();
+displayComment();
 
-// const displayComment = (comment) => {
-//   const commentContainer = document.getElementById(
-//     "comment-section__card-container"
-//   );
-
-//   commentContainer.innerHTML = "";
-
-//   for (let i = 0; i < commentArr.length; i++) {
-//     const card = createCommentCard(commentArr[i]);
-//     commentContainer.appendChild(card);
-//   }
-// };
-
-// what happens when event is triggered
+// Event listener on submit
 
 const handleCommentSubmit = (event) => {
   event.preventDefault();
@@ -75,11 +62,7 @@ const handleCommentSubmit = (event) => {
   };
 
   commentArr.push(commentData);
-  // displayComment();
 };
 
-// Event listener on submit
 const formEl = document.querySelector("#comment-form");
 formEl.addEventListener("submit", handleCommentSubmit);
-
-// displayComment();
