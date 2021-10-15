@@ -331,6 +331,8 @@
   }
 }
 
+// form styles
+
 .comment-form {
   @include flexDirection(column);
 
@@ -360,6 +362,42 @@
   border-radius: 0.25rem;
   margin-bottom: 1rem;
 }
+
+// comments styles:
+
+.comment-card {
+  @include flexDirection(column);
+  border-top: 1px solid $silver;
+  position: relative;
+
+  &__avatar {
+    content: url(../assets/images/Mohan-muruge.jpg);
+    border-radius: 50%;
+    max-width: 2.25rem;
+    max-height: 2.25rem;
+    margin-top: 1rem;
+  }
+
+  &__name {
+    @include mSecondaryHeader;
+    margin-top: 1rem;
+    position: absolute;
+    left: 3rem;
+  }
+
+  &__date {
+    @include mBodyCopy;
+    position: absolute;
+    right: 1rem;
+    padding: 1rem;
+  }
+
+  &__text {
+    @include mBodyCopy;
+    margin-left: 2rem;
+  }
+}
+
 // Footer Styles
 
 .footer {
