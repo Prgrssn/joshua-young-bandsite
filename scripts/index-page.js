@@ -19,6 +19,30 @@ const commentArr = [
   },
 ];
 
-console.log(commentArr);
+const formEl = document.getElementById("comment-form");
+console.log(formEl);
 
-// function displayComment();
+function createCommentCard(comment) {
+  const cardEl = document.createElement("article");
+  cardEl.classList.add("comment-card");
+
+  const commentName = document.createElement("h3");
+  commentName.classList.add("comment-card__name");
+  commentName.innerText = comment.name;
+
+  const commentDate = document.createElement("span");
+  commentDate.classList.add("comment-card__date");
+  commentDate.innerText = comment.date;
+
+  const commentText = document.createElement("span");
+  commentDate.classList.add("comment-card__comment");
+  commentText.innerText = comment.text;
+
+  cardEl.appendChild(commentName);
+  cardEl.appendChild(commentDate);
+  cardEl.appendChild(commentText);
+}
+
+// const displayComment = (obj) => {
+
+// }
