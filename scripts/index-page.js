@@ -68,6 +68,7 @@ const handleCommentSubmit = (event) => {
 
   commentArr.unshift(commentData);
   displayComment();
+  formEl.reset();
 };
 
 const formEl = document.querySelector("#comment-form");
