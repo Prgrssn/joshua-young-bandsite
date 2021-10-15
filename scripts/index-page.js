@@ -33,19 +33,25 @@ const buildCard = (obj) => {
   commentName.classList.add("comment-card__name");
   commentName.innerText = obj.name;
 
-  const commentDate = document.createElement("div");
+  const commentAvatar = document.createElement("figure");
+  commentAvatar.classList.add("comment-card__avatar");
+
+  const commentDate = document.createElement("p");
   commentDate.classList.add("comment-card__date");
   commentDate.innerText = obj.date;
 
-  const commentText = document.createElement("div");
+  const commentText = document.createElement("p");
   commentText.classList.add("comment-card__text");
   commentText.innerText = obj.text;
 
   cardEl.appendChild(commentName);
+  cardEl.appendChild(commentAvatar);
   cardEl.appendChild(commentDate);
   cardEl.appendChild(commentText);
   commentContainer.appendChild(cardEl);
 };
+
+// display comment
 
 const displayComment = () => {
   commentContainer.innerHTML = "";
@@ -60,9 +66,16 @@ const displayComment = () => {
 const handleCommentSubmit = (event) => {
   event.preventDefault();
 
+  // formatting the date
+  let date = new Date();
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
+  let year = date.getFullYear();
+  let newDate = `${month} / ${day} / ${year}`;
+
   const commentData = {
     name: event.target.name.value,
-    date: event.timeStamp,
+    date: newDate,
     text: event.target.comment.value,
   };
 
