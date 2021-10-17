@@ -329,6 +329,13 @@
     @include mPrimaryHeader;
     padding-top: 1.5rem;
   }
+
+  &__avatar {
+    border-radius: 50%;
+    max-width: 2.25rem;
+    max-height: 2.25rem;
+    margin-top: 1rem;
+  }
 }
 
 // form styles
@@ -380,21 +387,24 @@
 
   &__name {
     @include mSecondaryHeader;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
     position: absolute;
     left: 3rem;
   }
 
   &__date {
     @include mBodyCopy;
+    color: $silver;
     position: absolute;
-    right: 1rem;
-    padding: 1rem;
+    right: 0;
+    margin-top: 0.75rem;
   }
 
   &__text {
     @include mBodyCopy;
-    margin-left: 2rem;
+    font-weight: bold;
+    margin-left: 3rem;
+    margin-bottom: 1rem;
   }
 }
 
