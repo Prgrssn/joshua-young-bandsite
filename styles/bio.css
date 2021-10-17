@@ -402,6 +402,11 @@ body {
     margin-bottom: 2.25rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .comment-section {
+    margin: 2.25rem 6.5rem;
+  }
+}
 .comment-section__header {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -434,6 +439,11 @@ body {
     min-height: 3rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .comment-section__avatar {
+    margin-left: 15.75rem;
+  }
+}
 .comment-section__form-container {
   margin-left: 3rem;
   margin-top: -5rem;
@@ -442,6 +452,11 @@ body {
   .comment-section__form-container {
     padding: 0 4.5rem;
     margin-top: -5.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment-section__form-container {
+    padding: 0 16.5rem;
   }
 }
 
@@ -550,6 +565,11 @@ body {
 @media screen and (min-width: 768px) {
   .comment-card {
     margin: 0 4.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment-card {
+    margin: 0 16.5rem;
   }
 }
 .comment-card__avatar {

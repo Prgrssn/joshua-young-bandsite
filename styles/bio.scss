@@ -331,6 +331,10 @@
     margin-bottom: 2.25rem;
   }
 
+  @include desktop {
+    margin: 2.25rem 6.5rem;
+  }
+
   &__header {
     @include mPrimaryHeader;
     padding-top: 1.5rem;
@@ -354,6 +358,10 @@
       max-height: 3rem;
       min-height: 3rem;
     }
+
+    @include desktop {
+      margin-left: 15.75rem;
+    }
   }
 
   &__form-container {
@@ -363,6 +371,10 @@
     @include tablet {
       padding: 0 4.5rem;
       margin-top: -5.75rem;
+    }
+
+    @include desktop {
+      padding: 0 16.5rem;
     }
   }
 }
@@ -426,6 +438,10 @@
 
   @include tablet {
     margin: 0 4.5rem;
+  }
+
+  @include desktop {
+    margin: 0 16.5rem;
   }
 
   &__avatar {
