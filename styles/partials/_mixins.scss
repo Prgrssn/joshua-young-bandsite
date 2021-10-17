@@ -1,3 +1,6 @@
+@use "./_fonts.scss" as *;
+@use "./_colours.scss" as *;
+
 @mixin flexDirection($direction) {
   display: flex;
   flex-direction: $direction;
@@ -92,6 +95,65 @@
   line-height: 1.25rem;
   font-family: "avenir-bold";
   padding: 1rem;
+}
+
+// Dimensions - Form:
+@mixin mFormFieldDimensions {
+  min-height: 1rem;
+  min-width: 100%;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  border: 0.0625rem solid $mercury;
+}
+
+@mixin formFieldDimensions {
+  min-height: 3rem;
+  min-width: 100%;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  border: 0.0625rem solid $mercury;
+}
+
+@mixin activeFormField {
+  outline: none;
+  border: 1px solid $bandsite-darkblack;
+}
+
+@mixin errorFormField {
+  border: 1px solid #d22d2d;
+}
+
+@mixin mCTAButtonDefault {
+  @include mSecondaryHeader;
+  text-align: center;
+  background: $bandsite-black;
+  color: $white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  margin: 1rem 0;
+  height: 2.5rem;
+  width: 100%;
+}
+
+@mixin CTAButtonDefault {
+  @include mSecondaryHeader;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+  min-width: 9.375rem;
+}
+
+@mixin CTAButtonHover {
+  @include mSecondaryHeader;
+  text-align: center;
+  color: $white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  margin: 1rem 0;
+  height: 2.5rem;
+  width: 100%;
+  background: $bandsite-darkblack;
 }
 
 // screen sizes
