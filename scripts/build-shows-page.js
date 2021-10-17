@@ -2,46 +2,34 @@
 
 const showsArray = [
   {
-    ID: 1,
     Date: "Mon Sept 06 2021",
     Venue: "Ronald Lane",
     Location: "San Francisco, CA",
-    Tickets: "BUY TICKETS",
   },
   {
-    ID: 2,
     Date: "Tue Sept 21 2021",
     Venue: "Pier 3 East ",
     Location: "San Francisco, CA",
-    Tickets: "BUY TICKETS",
   },
   {
-    ID: 3,
     Date: "Fri Oct 15 2021",
     Venue: "View Lounge ",
     Location: "San Francisco, CA",
-    Tickets: "BUY TICKETS",
   },
   {
-    ID: 4,
     Date: "Sat Nov 06 2021",
     Venue: "Hyatt Agency",
     Location: "San Francisco, CA",
-    Tickets: "BUY TICKETS",
   },
   {
-    ID: 5,
     Date: "Fri Nov 26 2021",
     Venue: "Moscow Center",
     Location: "San Francisco, CA",
-    Tickets: "BUY TICKETS",
   },
   {
-    ID: 6,
     Date: "Wed Dec 15 2021",
     Venue: "Press Club",
     Location: "San Francisco, CA",
-    Tickets: "BUY TICKETS",
   },
 ];
 
@@ -61,83 +49,64 @@ displayShowsSectionHeader();
 
 // Shows table Construction:
 
-const displayShows = (showsArray) => {
+const constructShowTable = () => {
   const showTable = document.createElement("table");
   showTable.classList.add("show-table");
-  showSection.appendChild(showTable);
 
-  // outside
+  const showTableHead = document.createElement("thead");
 
-  // const tableSubheader = document.createElement("thead");
-  // tableSubheader.classList.add("show-table__subheader--outside");
-  // showTable.appendChild(tableSubheader);
+  const showTableHeadRow = document.createElement("tr");
+  showTableHeadRow.classList.add("show-table__header");
 
-  // const tableSubheaderDate = document.createElement("td");
-  // tableSubheaderDate.classList.add("show-table__subheader--text");
-  // tableSubheaderDate.innerText = "Date";
-  // tableSubheader.appendChild(tableSubheaderDate);
+  const showHeaderTextDate = document.createElement("th");
+  showHeaderTextDate.classList.add("show-table__header--text");
+  showHeaderTextDate.innerText = "Date";
 
-  // const tableSubheaderVenue = document.createElement("td");
-  // tableSubheaderVenue.classList.add("show-table__subheader--text");
-  // tableSubheaderVenue.innerText = "Venue";
-  // tableSubheader.appendChild(tableSubheaderVenue);
+  const showHeaderTextVenue = document.createElement("th");
+  showHeaderTextVenue.classList.add("show-table__header--text");
+  showHeaderTextVenue.innerText = "Venue";
 
-  // const tableSubheaderLocation = document.createElement("td");
-  // tableSubheaderLocation.classList.add("show-table__subheader--text");
-  // tableSubheaderLocation.innerText = "Location";
-  // tableSubheader.appendChild(tableSubheaderLocation);
+  const showHeaderTextLocation = document.createElement("th");
+  showHeaderTextLocation.classList.add("show-table__header--text");
+  showHeaderTextLocation.innerText = "Location";
 
   const showTableBody = document.createElement("tbody");
   showTableBody.classList.add("show-table__body");
+
+  showSection.appendChild(showTable);
+  showTable.appendChild(showTableHead);
+  showTableHead.appendChild(showTableHeadRow);
+  showTableHeadRow.appendChild(showHeaderTextDate);
+  showTableHeadRow.appendChild(showHeaderTextVenue);
+  showTableHeadRow.appendChild(showHeaderTextLocation);
   showTable.appendChild(showTableBody);
-  console.log(showTable);
 
   for (let i = 0; i < showsArray.length; i++) {
     const tableRow = document.createElement("tr");
-    tableRow.classList.add("show-table__row");
+    tableRow.classList.add("show-table__show-row");
+
+    const showDate = document.createElement("td");
+    showDate.classList.add("show-table__text--date");
+    showDate.innerText = showsArray[i].Date;
+
+    const showVenue = document.createElement("td");
+    showVenue.classList.add("show-table__text");
+    showVenue.innerText = showsArray[i].Venue;
+
+    const showLocation = document.createElement("td");
+    showLocation.classList.add("show-table__text");
+    showLocation.innerText = showsArray[i].Location;
+
+    const ticketButton = document.createElement("button");
+    ticketButton.classList.add("show-table__button");
+    ticketButton.innerText = "BUY TICKETS";
+
     showTableBody.appendChild(tableRow);
-
-    const tableSubheader = document.createElement("thead");
-    tableSubheader.classList.add("show-table__subheader");
-    tableRow.appendChild(tableSubheader);
-
-    const tableSubheaderDate = document.createElement("th");
-    tableSubheaderDate.classList.add("show-table__subheader--text");
-    tableSubheaderDate.innerText = "Date";
-    tableSubheader.appendChild(tableSubheaderDate);
-
-    const tableSubheaderVenue = document.createElement("th");
-    tableSubheaderVenue.classList.add("show-table__subheader--text");
-    tableSubheaderVenue.innerText = "Venue";
-    tableSubheader.appendChild(tableSubheaderVenue);
-
-    const tableSubheaderLocation = document.createElement("th");
-    tableSubheaderLocation.classList.add("show-table__subheader--text");
-    tableSubheaderLocation.innerText = "Location";
-    tableSubheader.appendChild(tableSubheaderLocation);
-
-    const tableRowDate = document.createElement("td");
-    tableRowDate.classList.add("show-table__content--dates");
-    tableRowDate.innerText = showsArray[i].Date;
-    tableRow.appendChild(tableRowDate);
-
-    const tableRowVenue = document.createElement("td");
-    tableRowVenue.classList.add("show-table__content");
-    tableRowVenue.innerText = showsArray[i].Venue;
-    tableRow.appendChild(tableRowVenue);
-
-    const tableRowLocation = document.createElement("td");
-    tableRowLocation.classList.add("show-table__content");
-    tableRowLocation.innerText = showsArray[i].Location;
-    tableRow.appendChild(tableRowLocation);
-
-    // button
-
-    const tableRowButton = document.createElement("button");
-    tableRowButton.classList.add("show-table__button");
-    tableRowButton.innerText = showsArray[i].Tickets;
-    tableRow.appendChild(tableRowButton);
+    tableRow.appendChild(showDate);
+    tableRow.appendChild(showVenue);
+    tableRow.appendChild(showLocation);
+    tableRow.appendChild(ticketButton);
   }
 };
 
-displayShows(showsArray);
+constructShowTable(showsArray);

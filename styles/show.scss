@@ -165,7 +165,7 @@
 
   &__header {
     @include mPrimaryHeader;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1rem 0 1rem;
 
     @include tablet {
       @include sectionHeader;
@@ -174,70 +174,74 @@
   }
 }
 
+@include mobile {
+  table,
+  table thead,
+  table tbody,
+  table th,
+  table td,
+  table tr {
+    @include flexDirection(column);
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tbody tr td:nth-of-type(n + 1) {
+    display: inline-block;
+  }
+
+  table tbody tr td:before {
+    display: block;
+  }
+
+  table tbody tr td:nth-of-type(1):before {
+    content: "DATE";
+    padding-top: 1rem;
+    padding-bottom: 0.25rem;
+  }
+
+  table tbody tr td:nth-of-type(2):before {
+    content: "VENUE";
+    padding-top: 1rem;
+    padding-bottom: 0.25rem;
+  }
+
+  table tbody tr td:nth-of-type(3):before {
+    content: "LOCATION";
+    padding-top: 1rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .show-table__text--date {
+    @include mBodyCopy;
+    font-family: "avenir-demi";
+
+    &::before {
+      @include mBodyCopy;
+      color: $silver;
+    }
+  }
+
+  .show-table__text {
+    @include mBodyCopy;
+
+    &::before {
+      @include mBodyCopy;
+      color: $silver;
+    }
+  }
+
+  .show-table__show-row {
+    border-bottom: 1px solid $mercury;
+    padding: 0 1rem 1rem 1rem;
+  }
+}
+
 .show-table {
   @include flexDirection(column);
   padding: 1rem 0;
-
-  @include tablet {
-    padding: 1rem;
-  }
-
-  &__row {
-    @include flexDirection(column);
-    border-bottom: 0.0625rem solid $silver;
-    padding: 1rem;
-
-    @include tablet {
-      @include flexDirection(row);
-      justify-content: space-between;
-      align-content: flex-start;
-      padding: 0.25rem 1rem;
-      text-align: left;
-    }
-  }
-
-  &__subheader {
-    @include flexDirection(column);
-
-    @include tablet {
-      @include flexDirection(row);
-      padding: 0 2.25rem 1rem 1.25rem;
-    }
-
-    &--text {
-      @include mBodyCopy();
-      color: $silver;
-      padding: 0.5rem 0.25rem;
-
-      @include tablet {
-        @include bodyCopy();
-        margin-right: 9rem;
-        font-family: "avenir-demi";
-      }
-    }
-  }
-
-  &__content {
-    @include mBodyCopy();
-    padding: 0.5rem 0;
-
-    @include tablet {
-      @include bodyCopy();
-      // padding: 0 3rem 0 1rem;
-      // margin-right: 9rem;
-    }
-
-    &--dates {
-      @include mBodyCopy();
-      font-family: "avenir-demi";
-      padding: 0.5rem 0;
-
-      @include tablet {
-        @include bodyCopy();
-        // padding: 0 3rem 0 0.75rem;
-      }
-    }
-  }
 
   &__button {
     font-family: "avenir-demi";
