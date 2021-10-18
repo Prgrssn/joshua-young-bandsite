@@ -287,28 +287,58 @@ table tr {
 .show-table {
   display: flex;
   flex-direction: column;
-  padding: 1rem 0;
+}
+.show-table__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 17rem 0rem 2.25rem;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: "avenir-reg";
+  text-align: left;
+  color: #afafaf;
+  font-family: "avenir-demi";
+}
+.show-table__header--text {
+  width: 5.5rem;
+}
+.show-table__show-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  margin: 1rem 2.25rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+.show-table__text {
+  padding: 0.25rem 1rem 1rem 0;
+  width: 9rem;
+  justify-self: center;
+}
+.show-table__text--date {
+  padding: 0.25rem 1rem 1rem 0;
+  width: 10rem;
+  justify-self: center;
+  font-family: "avenir-demi";
 }
 .show-table__button {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-family: "avenir-demi";
+  text-align: left;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+  max-width: 9.375rem;
+  text-align: center;
+  min-width: 9.375rem;
+  font-family: "avenir-reg";
+  font-weight: 700;
+  padding: 0.5rem 2rem;
   background: #323232;
   color: #ffffff;
   border: none;
-  padding: 1rem;
-  text-align: center;
   border-radius: 0.25rem;
-  margin-top: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .show-table__button {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-family: "avenir-reg";
-    text-align: left;
-    align-self: center;
-    justify-self: center;
-    margin: 0;
-  }
 }
 
 .footer {
