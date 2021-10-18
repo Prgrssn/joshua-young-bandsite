@@ -110,3 +110,13 @@ const constructShowTable = () => {
 };
 
 constructShowTable(showsArray);
+
+// active row event listener
+
+const activeRow = document.querySelectorAll(".show-table__show-row");
+
+activeRow.forEach((activeRow) => {
+  activeRow.addEventListener("click", (event) => {
+    activeRow.classList.add("show-table__show-row:active");
+  });
+});

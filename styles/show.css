@@ -191,6 +191,14 @@ body {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 1280px) {
+  .shows-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 6.25rem;
+  }
+}
 .shows-section__header {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -287,11 +295,12 @@ table tr {
 .show-table {
   display: flex;
   flex-direction: column;
+  padding: 4rem 0 2rem 0;
 }
 .show-table__header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0 17rem 0rem 2.25rem;
   font-size: 0.875rem;
   line-height: 1.375rem;
@@ -300,27 +309,55 @@ table tr {
   color: #afafaf;
   font-family: "avenir-demi";
 }
+@media screen and (min-width: 1280px) {
+  .show-table__header {
+    margin: 0 10rem 0rem 2.25rem;
+    justify-content: space-between;
+    padding-bottom: 1.125rem;
+  }
+}
 .show-table__header--text {
-  width: 5.5rem;
+  padding-right: 11.5rem;
+  width: 10rem;
+  justify-content: space-between;
 }
 .show-table__show-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  margin: 1rem 2.25rem;
+  padding: 1rem 2.25rem;
   border-bottom: 1px solid #e1e1e1;
+}
+.show-table__show-row:hover {
+  background: #fafafa;
+}
+.show-table__show-row:active {
+  background: #e1e1e1;
 }
 .show-table__text {
   padding: 0.25rem 1rem 1rem 0;
   width: 9rem;
   justify-self: center;
 }
+.show-table__text:hover {
+  background: #fafafa;
+}
+@media screen and (min-width: 1280px) {
+  .show-table__text {
+    margin-right: 2rem;
+  }
+}
 .show-table__text--date {
   padding: 0.25rem 1rem 1rem 0;
   width: 10rem;
   justify-self: center;
   font-family: "avenir-demi";
+}
+@media screen and (min-width: 1280px) {
+  .show-table__text--date {
+    margin-right: 6rem;
+  }
 }
 .show-table__button {
   font-size: 0.875rem;
