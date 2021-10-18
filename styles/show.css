@@ -216,7 +216,7 @@ body {
   .hero__sound-container {
     height: 25%;
     width: 30rem;
-    top: 13rem;
+    top: 15rem;
     right: 5rem;
     padding: 0 2.25rem;
   }
@@ -286,7 +286,9 @@ body {
   .show-table__header--text {
     padding: 0.25rem 1rem 1rem 0;
     width: 9rem;
+    margin-right: 3rem;
     justify-self: center;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 768px) {
