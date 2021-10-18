@@ -131,8 +131,8 @@ body {
     line-height: 4.25rem;
     font-family: "avenir-bold";
     text-align: left;
-    padding: 2.25rem;
-    top: 10rem;
+    padding: 2.25rem 10rem 1rem 2.25rem;
+    top: 3.75rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -149,6 +149,16 @@ body {
   color: #ffffff;
   padding: 1.5rem 1rem 1rem 1rem;
 }
+@media screen and (min-width: 768px) {
+  .hero__text--album-name {
+    font-size: 1.5rem;
+    line-height: 2.75rem;
+    font-family: "avenir-demi";
+    text-align: left;
+    padding: 2.25rem 10rem 0 2.25rem;
+    top: 2.25rem;
+  }
+}
 .hero__image {
   background-image: url("../assets/images/hero-shows.jpg");
   background-size: cover;
@@ -157,12 +167,12 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   max-width: 100vw;
-  height: 17rem;
+  height: 18.5rem;
   position: relative;
 }
 @media screen and (min-width: 768px) {
   .hero__image {
-    height: 60vh;
+    height: 70vh;
     max-width: 100vw;
   }
 }
@@ -174,17 +184,24 @@ body {
   left: 0;
   right: 0;
 }
-.hero__sound {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: auto;
-  max-width: 100%;
-  min-height: 20%;
-}
 .hero__sound-container {
+  width: 100%;
+  height: 8rem;
   position: absolute;
   padding: 0 1rem;
-  bottom: 1rem;
+  bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__sound-container {
+    height: 30%;
+    width: 30rem;
+    bottom: 3.5rem;
+    padding: 0 2.25rem;
+  }
+}
+.hero__sound-container iframe {
+  width: 100%;
+  height: 100%;
 }
 
 .shows-section {
@@ -217,6 +234,110 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .show-table {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 2rem 0;
+  }
+  .show-table__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "avenir-reg";
+    text-align: left;
+    color: #afafaf;
+    font-family: "avenir-demi";
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .show-table__header {
+    margin: 0 10rem 0rem 2.25rem;
+    justify-content: space-between;
+    padding-bottom: 1.125rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .show-table__header--text {
+    padding: 0.25rem 1rem 1rem 0;
+    width: 9rem;
+    justify-self: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .show-table__header-contain {
+    display: flex;
+    flex-direction: row;
+    padding: 0 2.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .show-table__show-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    padding: 1rem 2.25rem;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .show-table__show-row:hover {
+    background: #fafafa;
+  }
+  .show-table__show-row:active {
+    background: #e1e1e1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .show-table__text {
+    padding: 0.25rem 1rem 1rem 0;
+    width: 9rem;
+    justify-self: center;
+  }
+  .show-table__text:hover {
+    background: #fafafa;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .show-table__text {
+    margin-right: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .show-table__text--date {
+    padding: 0.25rem 1rem 1rem 0;
+    width: 10rem;
+    justify-self: center;
+    font-family: "avenir-demi";
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .show-table__text--date {
+    margin-right: 6rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .show-table__button {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "avenir-demi";
+    text-align: left;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+    max-width: 9.375rem;
+    text-align: center;
+    min-width: 9.375rem;
+    font-family: "avenir-reg";
+    font-weight: 700;
+    padding: 0.5rem 2rem;
+    background: #323232;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.25rem;
+  }
+}
 @media screen and (max-width: 767px) {
   table,
 table thead,
@@ -258,6 +379,30 @@ table tr {
     padding-bottom: 0.25rem;
   }
 
+  .show-table {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+  }
+  .show-table__text {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-family: "avenir-reg";
+    text-align: left;
+  }
+  .show-table__text::before {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-family: "avenir-reg";
+    text-align: left;
+    color: #afafaf;
+  }
+  .show-table__show-row {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 0 1rem 0.25rem 1rem;
+    display: flex;
+    flex-direction: column;
+  }
   .show-table__text--date {
     font-size: 0.8125rem;
     line-height: 1.125rem;
@@ -272,112 +417,18 @@ table tr {
     text-align: left;
     color: #afafaf;
   }
-
-  .show-table__text {
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
+  .show-table__button {
     font-family: "avenir-reg";
-    text-align: left;
-  }
-  .show-table__text::before {
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
-    font-family: "avenir-reg";
-    text-align: left;
-    color: #afafaf;
-  }
-
-  .show-table__show-row {
-    border-bottom: 1px solid #e1e1e1;
-    padding: 0 1rem 1rem 1rem;
+    min-width: 100%;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+    background: #323232;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.25rem;
   }
 }
-.show-table {
-  display: flex;
-  flex-direction: column;
-  padding: 4rem 0 2rem 0;
-}
-.show-table__header {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin: 0 17rem 0rem 2.25rem;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-family: "avenir-reg";
-  text-align: left;
-  color: #afafaf;
-  font-family: "avenir-demi";
-}
-@media screen and (min-width: 1280px) {
-  .show-table__header {
-    margin: 0 10rem 0rem 2.25rem;
-    justify-content: space-between;
-    padding-bottom: 1.125rem;
-  }
-}
-.show-table__header--text {
-  padding-right: 11.5rem;
-  width: 10rem;
-  justify-content: space-between;
-}
-.show-table__show-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-  padding: 1rem 2.25rem;
-  border-bottom: 1px solid #e1e1e1;
-}
-.show-table__show-row:hover {
-  background: #fafafa;
-}
-.show-table__show-row:active {
-  background: #e1e1e1;
-}
-.show-table__text {
-  padding: 0.25rem 1rem 1rem 0;
-  width: 9rem;
-  justify-self: center;
-}
-.show-table__text:hover {
-  background: #fafafa;
-}
-@media screen and (min-width: 1280px) {
-  .show-table__text {
-    margin-right: 2rem;
-  }
-}
-.show-table__text--date {
-  padding: 0.25rem 1rem 1rem 0;
-  width: 10rem;
-  justify-self: center;
-  font-family: "avenir-demi";
-}
-@media screen and (min-width: 1280px) {
-  .show-table__text--date {
-    margin-right: 6rem;
-  }
-}
-.show-table__button {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-family: "avenir-demi";
-  text-align: left;
-  padding: 0 2rem;
-  margin-bottom: 1rem;
-  max-width: 9.375rem;
-  text-align: center;
-  min-width: 9.375rem;
-  font-family: "avenir-reg";
-  font-weight: 700;
-  padding: 0.5rem 2rem;
-  background: #323232;
-  color: #ffffff;
-  border: none;
-  border-radius: 0.25rem;
-}
-
 .footer {
   background: #323232;
 }

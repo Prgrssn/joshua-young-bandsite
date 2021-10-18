@@ -108,8 +108,8 @@
 
     @include tablet {
       @include pageHeader();
-      padding: 2.25rem;
-      top: 10rem;
+      padding: 2.25rem 10rem 1rem 2.25rem;
+      top: 3.75rem;
     }
 
     @include desktop {
@@ -121,6 +121,12 @@
       @include mSecondaryHeader();
       color: $white;
       padding: 1.5rem 1rem 1rem 1rem;
+
+      @include tablet {
+        @include subHeader();
+        padding: 2.25rem 10rem 0 2.25rem;
+        top: 2.25rem;
+      }
     }
   }
 
@@ -131,11 +137,11 @@
     background-position: center center;
     object-fit: cover;
     max-width: 100vw;
-    height: 17rem;
+    height: 18.5rem;
     position: relative;
 
     @include tablet {
-      height: 60vh;
+      height: 70vh;
       max-width: 100vw;
     }
 
@@ -144,17 +150,24 @@
     }
   }
 
-  &__sound {
-    object-fit: cover;
-    height: auto;
-    max-width: 100%;
-    min-height: 20%;
-  }
-
   &__sound-container {
+    width: 100%;
+    height: 8rem;
     position: absolute;
     padding: 0 1rem;
-    bottom: 1rem;
+    bottom: 2rem;
+
+    @include tablet {
+      height: 30%;
+      width: 30rem;
+      bottom: 3.5rem;
+      padding: 0 2.25rem;
+    }
+  }
+
+  &__sound-container iframe {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -176,6 +189,95 @@
     @include tablet {
       @include sectionHeader;
       padding: 3rem 2.25rem 2.25rem 2.25rem;
+    }
+  }
+}
+
+// Tablet & Desktop views of shows table
+
+@include tablet {
+  .show-table {
+    @include flexDirection(column);
+    padding: 1rem 0 2rem 0;
+
+    &__header {
+      @include flexDirection(row);
+      justify-content: space-between;
+      align-content: center;
+
+      @include bodyCopy;
+      color: $silver;
+      font-family: "avenir-demi";
+
+      @include desktop {
+        margin: 0 10rem 0rem 2.25rem;
+        justify-content: space-between;
+        padding-bottom: 1.125rem;
+      }
+
+      &--text {
+        padding: 0.25rem 1rem 1rem 0;
+        width: 9rem;
+        justify-self: center;
+      }
+    }
+
+    &__header-contain {
+      @include flexDirection(row);
+      padding: 0 2.25rem;
+    }
+
+    &__show-row {
+      @include flexDirection(row);
+      justify-content: space-between;
+      align-content: center;
+      padding: 1rem 2.25rem;
+      border-bottom: 1px solid $mercury;
+
+      &:hover {
+        background: $alabaster;
+      }
+
+      &:active {
+        background: $mercury;
+      }
+    }
+
+    &__text {
+      padding: 0.25rem 1rem 1rem 0;
+      width: 9rem;
+      justify-self: center;
+
+      &:hover {
+        background: $alabaster;
+      }
+
+      @include desktop {
+        margin-right: 2rem;
+      }
+
+      &--date {
+        padding: 0.25rem 1rem 1rem 0;
+        width: 10rem;
+        justify-self: center;
+        font-family: "avenir-demi";
+
+        @include desktop {
+          margin-right: 6rem;
+        }
+      }
+    }
+
+    &__button {
+      @include CTAButtonDefault;
+      min-width: 9.375rem;
+      font-family: "avenir-reg";
+      font-weight: 700;
+      padding: 0.5rem 2rem;
+      background: $bandsite-black;
+      color: $white;
+      border: none;
+      border-radius: 00.25rem;
     }
   }
 }
@@ -222,110 +324,46 @@
     padding-bottom: 0.25rem;
   }
 
-  .show-table__text--date {
-    @include mBodyCopy;
-    font-family: "avenir-demi";
+  .show-table {
+    @include flexDirection(column);
+    padding-top: 1rem;
 
-    &::before {
+    &__text {
       @include mBodyCopy;
-      color: $silver;
-    }
-  }
 
-  .show-table__text {
-    @include mBodyCopy;
-
-    &::before {
-      @include mBodyCopy;
-      color: $silver;
-    }
-  }
-
-  .show-table__show-row {
-    border-bottom: 1px solid $mercury;
-    padding: 0 1rem 1rem 1rem;
-  }
-}
-
-// Tablet & Desktop views of shows table
-
-.show-table {
-  @include flexDirection(column);
-  padding: 4rem 0 2rem 0;
-
-  &__header {
-    @include flexDirection(row);
-    justify-content: flex-start;
-    margin: 0 17rem 0rem 2.25rem;
-
-    @include bodyCopy;
-    color: $silver;
-    font-family: "avenir-demi";
-
-    @include desktop {
-      margin: 0 10rem 0rem 2.25rem;
-      justify-content: space-between;
-      padding-bottom: 1.125rem;
-    }
-
-    &--text {
-      padding-right: 11.5rem;
-      width: 10rem;
-      justify-content: space-between;
-    }
-  }
-
-  &__show-row {
-    @include flexDirection(row);
-    justify-content: space-between;
-    align-content: center;
-    padding: 1rem 2.25rem;
-    border-bottom: 1px solid $mercury;
-
-    &:hover {
-      background: $alabaster;
-    }
-
-    &:active {
-      background: $mercury;
-    }
-  }
-
-  &__text {
-    padding: 0.25rem 1rem 1rem 0;
-    width: 9rem;
-    justify-self: center;
-
-    &:hover {
-      background: $alabaster;
-    }
-
-    @include desktop {
-      margin-right: 2rem;
-    }
-
-    &--date {
-      padding: 0.25rem 1rem 1rem 0;
-      width: 10rem;
-      justify-self: center;
-      font-family: "avenir-demi";
-
-      @include desktop {
-        margin-right: 6rem;
+      &::before {
+        @include mBodyCopy;
+        color: $silver;
       }
     }
-  }
 
-  &__button {
-    @include CTAButtonDefault;
-    min-width: 9.375rem;
-    font-family: "avenir-reg";
-    font-weight: 700;
-    padding: 0.5rem 2rem;
-    background: $bandsite-black;
-    color: $white;
-    border: none;
-    border-radius: 00.25rem;
+    &__show-row {
+      border-bottom: 1px solid $mercury;
+      padding: 0 1rem 0.25rem 1rem;
+      @include flexDirection(column);
+    }
+
+    &__text--date {
+      @include mBodyCopy;
+      font-family: "avenir-demi";
+
+      &::before {
+        @include mBodyCopy;
+        color: $silver;
+      }
+    }
+
+    &__button {
+      font-family: "avenir-reg";
+      min-width: 100%;
+      font-weight: 700;
+      padding: 1rem 2rem;
+      margin: 1rem 0;
+      background: $bandsite-black;
+      color: $white;
+      border: none;
+      border-radius: 00.25rem;
+    }
   }
 }
 

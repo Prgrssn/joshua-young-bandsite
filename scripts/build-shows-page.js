@@ -54,6 +54,7 @@ const constructShowTable = () => {
   showTable.classList.add("show-table");
 
   const showTableHead = document.createElement("thead");
+  showTableHead.classList.add("show-table__header-contain");
 
   const showTableHeadRow = document.createElement("tr");
   showTableHeadRow.classList.add("show-table__header");
