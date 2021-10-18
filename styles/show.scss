@@ -229,7 +229,7 @@
       font-family: "avenir-demi";
 
       @include desktop {
-        margin: 0 10rem 0rem 2.25rem;
+        margin: 3rem 5rem 0rem 2.25rem;
         justify-content: space-between;
         padding-bottom: 1.125rem;
       }
@@ -242,6 +242,8 @@
         justify-content: space-between;
 
         @include desktop {
+          margin-right: 5rem;
+          padding: 0.25rem 4rem;
         }
       }
     }
@@ -249,6 +251,11 @@
     &__header-contain {
       @include flexDirection(row);
       padding: 0 2.25rem;
+
+      @include desktop {
+        padding: 0;
+        margin-left: -4rem;
+      }
     }
 
     &__show-row {
@@ -287,7 +294,7 @@
         font-family: "avenir-demi";
 
         @include desktop {
-          margin-right: 6rem;
+          margin-right: 7rem;
         }
       }
     }
