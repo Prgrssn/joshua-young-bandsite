@@ -40,6 +40,7 @@ body {
   line-height: 2rem;
   text-align: left;
   font-family: "avenir-bold";
+  font-family: "avenir-demi";
   padding: 1.5rem 1rem 1rem 1rem;
 }
 @media screen and (min-width: 768px) {
@@ -49,6 +50,7 @@ body {
     font-family: "avenir-reg";
     font-weight: 700;
     text-align: left;
+    font-family: "avenir-demi";
     padding: 2.25rem;
   }
 }
@@ -157,6 +159,7 @@ body {
   line-height: 2rem;
   text-align: left;
   font-family: "avenir-bold";
+  font-family: "avenir-demi";
   position: absolute;
   top: 4rem;
   color: #ffffff;
@@ -168,8 +171,9 @@ body {
     line-height: 4.25rem;
     font-family: "avenir-bold";
     text-align: left;
-    padding: 2.25rem;
-    top: 10rem;
+    font-family: "avenir-demi";
+    padding: 2.5rem;
+    top: 9rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -179,12 +183,10 @@ body {
   }
 }
 .hero__image {
-  background-image: url("../assets/images/hero-bio.jpg");
+  background: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  -o-object-fit: cover;
-     object-fit: cover;
   max-width: 100vw;
   height: 12rem;
   position: relative;
@@ -193,6 +195,11 @@ body {
   .hero__image {
     height: 60vh;
     max-width: 100vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__image {
+    height: 70vh;
   }
 }
 .hero__image--overlay {
@@ -217,10 +224,10 @@ body {
 }
 @media screen and (min-width: 768px) {
   .about__quote {
-    padding: 2.25rem 6rem 0rem 6rem;
+    padding: 2rem 6.5rem 0rem 6.5rem;
     font-family: "avenir-demi";
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     line-height: 1.75rem;
   }
   .about__quote--cite {
@@ -228,7 +235,7 @@ body {
     line-height: 1.375rem;
     font-family: "avenir-reg";
     text-align: left;
-    padding: 0.5rem 6rem;
+    padding: 0.5rem 6.5rem;
     font-family: "avenir-demi";
     font-weight: 200;
   }
@@ -285,7 +292,7 @@ body {
     line-height: 2.75rem;
     font-family: "avenir-demi";
     text-align: left;
-    padding-left: 3.75rem;
+    padding-left: 6rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -301,7 +308,7 @@ body {
   .bio-card__description {
     display: flex;
     flex-direction: row;
-    padding: 0 2.75rem;
+    padding: 0 5rem 1rem 5rem;
   }
 }
 @media screen and (min-width: 1280px) {

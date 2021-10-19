@@ -1,5 +1,6 @@
 @use "./_fonts.scss" as *;
 @use "./_colours.scss" as *;
+@use "./global.scss" as *;
 
 @mixin flexDirection($direction) {
   display: flex;
@@ -160,19 +161,19 @@
 // screen sizes
 
 @mixin mobile {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $mobile) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $desktop) {
     @content;
   }
 }
