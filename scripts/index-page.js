@@ -1,3 +1,5 @@
+const { default: axios } = require("axios");
+
 const commentArr = [
   {
     name: "Connor Walton",
@@ -20,6 +22,17 @@ const commentArr = [
 const commentContainer = document.querySelector(
   "#comment-section__card-container"
 );
+
+// get comments via promise
+
+// getComments = () => {
+//   axios
+//   .get("")
+//   .then(results => {
+//     results.forEach()
+//   })
+//   .catch(err => console.log(err));
+// }
 
 // build comment card element
 
