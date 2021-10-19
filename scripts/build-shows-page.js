@@ -53,30 +53,26 @@ const constructShowTable = () => {
   const showTable = document.createElement("table");
   showTable.classList.add("show-table");
 
-  const showTableHead = document.createElement("thead");
-  showTableHead.classList.add("show-table__header-contain");
-
-  const showTableHeadRow = document.createElement("tr");
+  const showTableHeadRow = document.createElement("thead");
   showTableHeadRow.classList.add("show-table__header");
 
   const showHeaderTextDate = document.createElement("th");
-  showHeaderTextDate.classList.add("show-table__header--text");
+  showHeaderTextDate.classList.add("show-table__header--date-text");
   showHeaderTextDate.innerText = "DATE";
 
   const showHeaderTextVenue = document.createElement("th");
-  showHeaderTextVenue.classList.add("show-table__header--text");
+  showHeaderTextVenue.classList.add("show-table__header--venue-text");
   showHeaderTextVenue.innerText = "VENUE";
 
   const showHeaderTextLocation = document.createElement("th");
-  showHeaderTextLocation.classList.add("show-table__header--text");
+  showHeaderTextLocation.classList.add("show-table__header--loc-text");
   showHeaderTextLocation.innerText = "LOCATION";
 
   const showTableBody = document.createElement("tbody");
   showTableBody.classList.add("show-table__body");
 
   showSection.appendChild(showTable);
-  showTable.appendChild(showTableHead);
-  showTableHead.appendChild(showTableHeadRow);
+  showTable.appendChild(showTableHeadRow);
   showTableHeadRow.appendChild(showHeaderTextDate);
   showTableHeadRow.appendChild(showHeaderTextVenue);
   showTableHeadRow.appendChild(showHeaderTextLocation);
