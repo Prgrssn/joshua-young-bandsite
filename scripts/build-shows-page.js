@@ -33,6 +33,10 @@ const showsArray = [
   },
 ];
 
+// shows API:
+const showsAPI =
+  "https://project-1-api.herokuapp.com/showdates?api_key=0f383f02-d3bd-4c8d-9bee-b53825c23122";
+
 // Shows Section:
 const showSection = document.querySelector(".shows-section");
 

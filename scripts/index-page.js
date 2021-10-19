@@ -1,5 +1,3 @@
-const { default: axios } = require("axios");
-
 const commentArr = [
   {
     name: "Connor Walton",
@@ -18,6 +16,10 @@ const commentArr = [
   },
 ];
 
+// comment API:
+const commentAPI =
+  "https://project-1-api.herokuapp.com/comments?api_key=0f383f02-d3bd-4c8d-9bee-b53825c23122";
+
 // Comments Section
 const commentContainer = document.querySelector(
   "#comment-section__card-container"
@@ -25,14 +27,14 @@ const commentContainer = document.querySelector(
 
 // get comments via promise
 
-// getComments = () => {
-//   axios
-//   .get("")
-//   .then(results => {
-//     results.forEach()
-//   })
-//   .catch(err => console.log(err));
-// }
+getComments = () => {
+  axios
+    .get(commentAPI)
+    .then((results) => {
+      results.forEach();
+    })
+    .catch((err) => console.log(err));
+};
 
 // build comment card element
 
