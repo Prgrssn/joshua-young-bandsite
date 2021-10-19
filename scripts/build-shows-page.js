@@ -2,34 +2,34 @@
 
 const showsArray = [
   {
-    Date: "Mon Sept 06 2021",
-    Venue: "Ronald Lane  ",
-    Location: "San Francisco, CA",
+    date: "Mon Sept 06 2021",
+    place: "Ronald Lane  ",
+    location: "San Francisco, CA",
   },
   {
-    Date: "Tue Sept 21 2021",
-    Venue: "Pier 3 East  ",
-    Location: "San Francisco, CA",
+    date: "Tue Sept 21 2021",
+    place: "Pier 3 East  ",
+    location: "San Francisco, CA",
   },
   {
-    Date: "Fri Oct 15 2021 ",
-    Venue: "View Lounge ",
-    Location: "San Francisco, CA",
+    date: "Fri Oct 15 2021 ",
+    place: "View Lounge ",
+    location: "San Francisco, CA",
   },
   {
-    Date: "Sat Nov 06 2021 ",
-    Venue: "Hyatt Agency ",
-    Location: "San Francisco, CA",
+    date: "Sat Nov 06 2021 ",
+    place: "Hyatt Agency ",
+    location: "San Francisco, CA",
   },
   {
-    Date: "Fri Nov 26 2021 ",
-    Venue: "Moscow Center",
-    Location: "San Francisco, CA",
+    date: "Fri Nov 26 2021 ",
+    place: "Moscow Center",
+    location: "San Francisco, CA",
   },
   {
-    Date: "Wed Dec 15 2021 ",
-    Venue: "Press Club   ",
-    Location: "San Francisco, CA",
+    date: "Wed Dec 15 2021 ",
+    place: "Press Club   ",
+    location: "San Francisco, CA",
   },
 ];
 
@@ -88,15 +88,15 @@ const constructShowTable = () => {
 
     const showDate = document.createElement("td");
     showDate.classList.add("show-table__text--date");
-    showDate.innerText = showsArray[i].Date;
+    showDate.innerText = showsArray[i].date;
 
     const showVenue = document.createElement("td");
     showVenue.classList.add("show-table__text");
-    showVenue.innerText = showsArray[i].Venue;
+    showVenue.innerText = showsArray[i].place;
 
     const showLocation = document.createElement("td");
     showLocation.classList.add("show-table__text");
-    showLocation.innerText = showsArray[i].Location;
+    showLocation.innerText = showsArray[i].location;
 
     const ticketButton = document.createElement("button");
     ticketButton.classList.add("show-table__button");
