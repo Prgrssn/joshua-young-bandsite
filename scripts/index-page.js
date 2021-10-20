@@ -1,23 +1,23 @@
-const commentArr = [
-  {
-    name: "Connor Walton",
-    timestamp: "02/17/2021",
-    comment:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  },
-  {
-    name: "Emilie Beach",
-    timestamp: "01/09/2021",
-    comment:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-  {
-    name: "Miles Acosta",
-    timestamp: "12/20/2020",
-    comment:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  },
-];
+// const commentArr = [
+//   {
+//     name: "Connor Walton",
+//     timestamp: "02/17/2021",
+//     comment:
+//       "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+//   },
+//   {
+//     name: "Emilie Beach",
+//     timestamp: "01/09/2021",
+//     comment:
+//       "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
+//   },
+//   {
+//     name: "Miles Acosta",
+//     timestamp: "12/20/2020",
+//     comment:
+//       "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
+//   },
+// ];
 
 // comment API:
 const commentAPI =
@@ -30,14 +30,19 @@ const commentContainer = document.querySelector(
 
 // get comments via promise
 
-getComments = () => {
+const getComments = () => {
   axios
     .get(commentAPI)
-    .then((results) => {
-      results.forEach();
+    .then((result) => {
+      commentContainer.innerHTML = "";
+      const commentContent = result.data.forEach((element) => {
+        buildCard(element);
+      });
     })
     .catch((err) => console.log(err));
 };
+
+getComments();
 
 // build comment card element
 
@@ -69,13 +74,13 @@ const buildCard = (obj) => {
 
 // display comment
 
-const displayComment = () => {
-  commentContainer.innerHTML = "";
+// const displayComment = () => {
+//   commentContainer.innerHTML = "";
 
-  for (let i = 0; i < commentArr.length; i++) {
-    buildCard(commentArr[i]);
-  }
-};
+//   for (let i = 0; i < commentArr.length; i++) {
+//     buildCard(commentArr[i]);
+//   }
+// };
 
 // Event listener on submit
 
@@ -103,4 +108,4 @@ const handleCommentSubmit = (event) => {
 const formEl = document.querySelector("#comment-form");
 formEl.addEventListener("submit", handleCommentSubmit);
 
-displayComment();
+// displayComment();

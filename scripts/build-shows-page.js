@@ -50,12 +50,13 @@ const constructShowTable = () => {
   axios
     .get(showsAPI)
     .then((result) => {
-      const commentContent = result.data.forEach((element) => {
-        // let timestamp = element.date.getTime();
-        // let day = timestamp.getDay();
-        // let month = timestamp.getMonth() + 1;
-        // let date = timestamp.getDate();
-        // let year = timestamp.getFullYear();
+      const showTimes = result.data.forEach((element) => {
+        // let timestamp = element.date;
+        // let newTimestamp = new Date(timestamp * 1000);
+        // let day = newTimestamp.getDay();
+        // let month = newTimestamp.getMonth() + 1;
+        // let date = newTimestamp.getDate();
+        // let year = newTimestamp.getFullYear();
         // let newDate = `${day}/${month}/${date}/${year}`;
 
         const tableRow = document.createElement("tr");
