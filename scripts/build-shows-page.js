@@ -51,12 +51,20 @@ const constructShowTable = () => {
     .get(showsAPI)
     .then((result) => {
       const commentContent = result.data.forEach((element) => {
+        // let timestamp = element.date.getTime();
+        // let day = timestamp.getDay();
+        // let month = timestamp.getMonth() + 1;
+        // let date = timestamp.getDate();
+        // let year = timestamp.getFullYear();
+        // let newDate = `${day}/${month}/${date}/${year}`;
+
         const tableRow = document.createElement("tr");
         tableRow.classList.add("show-table__show-row");
 
         const showDate = document.createElement("td");
         showDate.classList.add("show-table__text--date");
         showDate.innerText = element.date;
+        // showDate.innerText = newDate;
 
         const showVenue = document.createElement("td");
         showVenue.classList.add("show-table__text");
