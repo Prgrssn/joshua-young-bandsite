@@ -16,27 +16,13 @@ const getComments = () => {
     .then((result) => {
       commentContainer.innerHTML = "";
       const commentContent = result.data.forEach((element) => {
-        buildCard(element);
+        displayComments(element);
       });
     })
     .catch((err) => console.log(err));
 };
 
-// const postComments = () => {
-//   axios
-//     .post(commentAPI, {
-
-//     })
-//     .then((response) => {
-//       console.log(response.data);
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// };
-
-// build comment card element
-const buildCard = (obj) => {
+const displayComments = (obj) => {
   const cardEl = document.createElement("article");
   cardEl.classList.add("comment-card");
 
