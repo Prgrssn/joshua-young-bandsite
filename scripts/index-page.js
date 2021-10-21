@@ -17,7 +17,12 @@ const getComments = () => {
     .get(commentAPI)
     .then((result) => {
       commentContainer.innerHTML = "";
-      const commentContent = result.data.reverse().forEach((element) => {
+
+      const commentContent = result.data.sort(
+        (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
+      );
+
+      commentContent.forEach((element) => {
         displayComments(element);
       });
     })
