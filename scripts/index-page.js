@@ -15,7 +15,7 @@ const getComments = () => {
     .get(commentAPI)
     .then((result) => {
       commentContainer.innerHTML = "";
-      const commentContent = result.data.forEach((element) => {
+      const commentContent = result.data.reverse().forEach((element) => {
         displayComments(element);
       });
     })
@@ -35,7 +35,7 @@ const displayComments = (obj) => {
 
   const commentDate = document.createElement("p");
   commentDate.classList.add("comment-card__date");
-  commentDate.innerText = new Date(Number(obj.timestamp)).toDateString();
+  commentDate.innerText = new Date(Number(obj.timestamp)).toLocaleDateString();
 
   const commentText = document.createElement("p");
   commentText.classList.add("comment-card__text");
