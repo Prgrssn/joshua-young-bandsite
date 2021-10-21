@@ -53,6 +53,7 @@ const constructShowTable = () => {
       const showTimes = result.data.forEach((element) => {
         // let timestamp = element.date;
         // let newTimestamp = new Date(timestamp * 1000);
+        // let newDate = newTimestamp.write(newDate.toLocaleString());
         // let day = newTimestamp.getDay();
         // let month = newTimestamp.getMonth() + 1;
         // let date = newTimestamp.getDate();
@@ -64,8 +65,9 @@ const constructShowTable = () => {
 
         const showDate = document.createElement("td");
         showDate.classList.add("show-table__text--date");
-        showDate.innerText = element.date;
-        // showDate.innerText = newDate;
+        // showDate.innerText = element.date;
+        // const newDate = new Date(Number(element.date));
+        showDate.innerText = new Date(Number(element.date)).toDateString();
 
         const showVenue = document.createElement("td");
         showVenue.classList.add("show-table__text");

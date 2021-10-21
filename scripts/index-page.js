@@ -1,23 +1,4 @@
-// const commentArr = [
-//   {
-//     name: "Connor Walton",
-//     timestamp: "02/17/2021",
-//     comment:
-//       "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-//   },
-//   {
-//     name: "Emilie Beach",
-//     timestamp: "01/09/2021",
-//     comment:
-//       "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-//   },
-//   {
-//     name: "Miles Acosta",
-//     timestamp: "12/20/2020",
-//     comment:
-//       "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-//   },
-// ];
+// const { default: axios } = require("axios");
 
 // comment API:
 const commentAPI =
@@ -28,8 +9,7 @@ const commentContainer = document.querySelector(
   "#comment-section__card-container"
 );
 
-// get comments via promise
-
+// get comments from API
 const getComments = () => {
   axios
     .get(commentAPI)
@@ -42,10 +22,20 @@ const getComments = () => {
     .catch((err) => console.log(err));
 };
 
-getComments();
+// const postComments = () => {
+//   axios
+//     .post(commentAPI, {
+
+//     })
+//     .then((response) => {
+//       console.log(response.data);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// };
 
 // build comment card element
-
 const buildCard = (obj) => {
   const cardEl = document.createElement("article");
   cardEl.classList.add("comment-card");
@@ -59,7 +49,7 @@ const buildCard = (obj) => {
 
   const commentDate = document.createElement("p");
   commentDate.classList.add("comment-card__date");
-  commentDate.innerText = obj.timestamp;
+  commentDate.innerText = new Date(Number(obj.timestamp)).toDateString();
 
   const commentText = document.createElement("p");
   commentText.classList.add("comment-card__text");
@@ -72,40 +62,28 @@ const buildCard = (obj) => {
   commentContainer.appendChild(cardEl);
 };
 
-// display comment
-
-// const displayComment = () => {
-//   commentContainer.innerHTML = "";
-
-//   for (let i = 0; i < commentArr.length; i++) {
-//     buildCard(commentArr[i]);
-//   }
-// };
-
-// Event listener on submit
-
 const handleCommentSubmit = (event) => {
   event.preventDefault();
 
-  // formatting the date
-  let date = new Date();
-  let month = date.getMonth() + 1;
-  let day = date.getDate();
-  let year = date.getFullYear();
-  let newDate = `${month}/${day}/${year}`;
-
-  const commentData = {
-    name: event.target.name.value,
-    timestamp: newDate,
-    comment: event.target.comment.value,
+  const postComments = (obj) => {
+    axios
+      .post(commentAPI, {
+        name: event.target.name.value,
+        comment: event.target.comment.value,
+      })
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
-  commentArr.unshift(commentData);
-  displayComment();
+  postComments();
   formEl.reset();
 };
 
 const formEl = document.querySelector("#comment-form");
 formEl.addEventListener("submit", handleCommentSubmit);
 
-// displayComment();
+getComments();
